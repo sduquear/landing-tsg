@@ -4,7 +4,6 @@ import MobileMenu from "./MobileMenu.astro";
 import MobileMenuToggle from "../common/MobileMenuToggle.astro";
 import LogoLight from "@/assets/logos/logo-light.svg";
 import LogoDark from "@/assets/logos/logo-dark.svg";
-import { Debug } from "astro:components";
 
 export interface Props {
   textColor?: string;
@@ -17,10 +16,6 @@ const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
 ---
 
 <header id="main-header" class="absolute top-0 z-50 w-screen p-5">
-  <Debug currentPath={currentPath} />
-  <Debug isExperiencesPage={isExperiencesPage} />
-  <Debug baseRoute={baseRoute} />
-  <Debug textColor={textColor} />
   <nav class="flex items-center justify-between uppercase">
     <div class="flex">
       <a href="/">
