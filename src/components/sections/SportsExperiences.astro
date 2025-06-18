@@ -4,6 +4,7 @@ import SectionHeader from "@/components/common/SectionHeader.astro";
 import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
 import DecoratorIcon from "@/assets/icons/decorator.svg";
 import Btn from "@/components/common/Btn.astro";
+import heroVideo from "/videos/hero.mp4";
 ---
 
 <section class="relative w-full overflow-hidden px-6 pt-40">
@@ -31,7 +32,7 @@ import Btn from "@/components/common/Btn.astro";
     style="clip-path: polygon(2% 0, 99% 0, 97% 100%, 0% 100%);"
   >
     <video
-      src="/videos/hero.mp4"
+      src={heroVideo}
       autoplay
       loop
       muted

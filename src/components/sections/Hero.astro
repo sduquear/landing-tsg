@@ -2,13 +2,14 @@
 // Hero.astro
 import Btn from "@/components/common/Btn.astro";
 import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
+import heroVideo from "/videos/hero.mp4";
 ---
 
 <section
   class="relative flex min-h-screen w-full px-5 clip-down-right-hero_mobile lg:clip-down-right-hero_desktop"
 >
   <video
-    src="/videos/hero.mp4"
+    src={heroVideo}
     autoplay
     loop
     muted

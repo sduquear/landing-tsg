@@ -9,6 +9,9 @@ import WhiteBalanceSunnyIcon from "@/assets/icons/white-balance-sunny.svg";
 import PermMediaIcon from "@/assets/icons/perm-media.svg";
 import MdiGymIcon from "@/assets/icons/gym.svg";
 import FootballPitchIcon from "@/assets/icons/football-pitch.svg";
+import allInVideo from "/videos/all-in.mp4";
+import facilitiesVideo from "/videos/facilities.mp4";
+import facilitiesGalleryVideo from "/videos/facilities-gallery.mp4";
 ---
 
 <section class="relative w-full pt-24">
@@ -17,7 +20,7 @@ import FootballPitchIcon from "@/assets/icons/football-pitch.svg";
     style="clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);"
   >
     <video
-      src="/videos/all-in.mp4"
+      src={allInVideo}
       autoplay
       loop
       muted
@@ -177,7 +180,7 @@ import FootballPitchIcon from "@/assets/icons/football-pitch.svg";
       <!-- Video derecha -->
       <div class="relative w-full lg:w-1/2">
         <video
-          src="/videos/facilities.mp4"
+          src={facilitiesVideo}
           autoplay
           loop
           muted
@@ -209,7 +212,7 @@ import FootballPitchIcon from "@/assets/icons/football-pitch.svg";
         </div>
         <div class="h-[480px] w-[414px] flex-shrink-0 overflow-hidden -ml-2">
           <video
-            src="/videos/facilities-gallery.mp4"
+            src={facilitiesGalleryVideo}
             autoplay
             loop
             muted
