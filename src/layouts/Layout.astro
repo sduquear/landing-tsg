@@ -9,7 +9,6 @@ interface Props {
 }
 
 const { title = "Total Sports Group" } = Astro.props;
-const preloadVideo = "/assets/hero/hero-video.m4v";
 ---
 
 <!doctype html>
@@ -17,7 +16,6 @@ const preloadVideo = "/assets/hero/hero-video.m4v";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="preload" as="image" href={preloadVideo} />
     <title>{title}</title>
     <meta
       name="description"
