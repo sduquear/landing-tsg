@@ -1,0 +1,59 @@
+---
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+import Services from "@/components/sections/Services.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Total Sports Group" } = Astro.props;
+const preloadVideo = "/assets/hero/hero-video.m4v";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preload" as="image" href={preloadVideo} />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Experience unique, fully managed football journeys in Spain. TSG designs tailored programs for academies, schools, and elite teams, combining competition, training, culture, and personal development at world-class facilities."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      property="og:title"
+      content="Total Sports Group | Unique Football Experiences in Spain"
+    />
+    <meta
+      property="og:description"
+      content="Discover how TSG connects sport, talent, and unforgettable experiences on a global scale. Personalized programs, international tournaments, top-tier partners, and all-inclusive services for teams and athletes."
+    />
+    <meta property="og:image" content="/images/hero.png" />
+    <meta property="og:url" content="https://www.totalsportsgroup.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Total Sports Group" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Total Sports Group" />
+    <meta
+      name="twitter:description"
+      content="Total Sports Group creates unique football experiences in Spain, offering tailored programs, elite training, and unforgettable moments for teams, academies, and athletes from around the world."
+    />
+    <meta name="twitter:image" content="/images/hero.png" />
+    <meta name="twitter:url" content="https://www.totalsportsgroup.com/" />
+    <meta
+      name="keywords"
+      content="football, sports experiences, Spain, academies, tournaments, talent development, sports travel, TSG, Total Sports Group, partners, sports facilities, sports events, sports consulting"
+    />
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Services />
+    <Footer />
+  </body>
+</html>

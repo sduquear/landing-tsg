@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import './mobile-menu.css';
+
+html, body {
+  overscroll-behavior: none;
+}
+
+@font-face {
+  font-family: 'Regesto Grotesk';
+  src: url('/fonts/RegestoGrotesk-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Titling Gothic FB';
+  src: url('/fonts/TitlingGothicFBCond-Med.woff2') format('woff2');
+  font-weight: 500;
+  font-style: medium;
+  font-display: swap;
+}
+
+@theme {
+  --font-regesto: 'Regesto Grotesk', serif;
+  --font-titling: 'Titling Gothic FB', sans-serif;
+}
+
+@utility clip-down-right-menu {
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 95% 100%, 0 100%);
+}
+
+@utility clip-down-right-hero_mobile {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 94% 100%, 0 100%);
+}
+
+@utility clip-down-right-hero_desktop {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 98% 100%, 0 100%);
+}

@@ -1,0 +1,264 @@
+---
+// AllIn.astro
+import SectionHeader from "../common/SectionHeader.astro";
+import FootballPlayIcon from "@/assets/svg/football-play.svg";
+import VideoCheckIcon from "@/assets/svg/video-check.svg";
+import HotelIcon from "@/assets/svg/hotel.svg";
+import BusIcon from "@/assets/svg/bus.svg";
+import WhiteBalanceSunnyIcon from "@/assets/svg/white-balance-sunny.svg";
+import PermMediaIcon from "@/assets/svg/perm-media.svg";
+import MdiGymIcon from "@/assets/svg/mdi_gym.svg";
+import FootballPitchIcon from "@/assets/svg/football-pitch.svg";
+---
+
+<section class="relative w-full pt-24">
+  <div
+    class="flex flex-col w-full h-full"
+    style="clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);"
+  >
+    <video
+      src="/assets/all-in/all-in-video.m4v"
+      autoplay
+      loop
+      muted
+      playsinline
+      class="w-full h-full object-none"></video>
+  </div>
+  <div class="flex flex-col lg:flex-row px-6 py-6 lg:py-12">
+    <div class="lg:w-2/3 lg:flex flex-col">
+      <SectionHeader
+        title="All inclusive services"
+        titleColor="#273023"
+        titleClass="w-[72%]"
+      />
+    </div>
+    <div
+      class="lg:w-1/3 flex flex-row lg:justify-end lg:items-end items-center lg:mb-8"
+    >
+      <span class="text-[#273023] text-xl font-regesto"
+        >Every program includes a comprehensive base package, with flexible
+        add-ons to meet each team's goals and budget:</span
+      >
+    </div>
+  </div>
+</section>
+
+<!-- Servicios All-In (bloque añadido desde Figma) -->
+<div class="flex flex-col gap-6 w-full px-6 pb-24">
+  <!-- Fila 1 -->
+  <div class="flex flex-col lg:flex-row w-full gap-4 lg:gap-2">
+    <!-- Bloque 1 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <FootballPlayIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span
+        class="font-titling text-3xl text-[#273023] uppercase text-balance ml-2"
+        >Professional Coaching Staff</span
+      >
+    </div>
+    <!-- Bloque 2 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <VideoCheckIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span
+        class="font-titling text-3xl text-[#273023] uppercase text-balance ml-2"
+        >Match Recordings & Reports</span
+      >
+    </div>
+    <!-- Bloque 3 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <HotelIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span
+        class="font-titling text-3xl text-[#273023] uppercase text-balance ml-2"
+        >Accommodation (Full Board)</span
+      >
+    </div>
+  </div>
+  <!-- Fila 2 -->
+  <div class="flex flex-col lg:flex-row w-full gap-4">
+    <!-- Bloque 4 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <BusIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span
+        class="font-titling text-3xl text-[#273023] uppercase lg:w-[88%] w-[72%]"
+        >Local Transportation</span
+      >
+    </div>
+    <!-- Bloque 5 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <WhiteBalanceSunnyIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span class="font-titling text-3xl text-[#273023] uppercase ml-2"
+        >Leisure & Cultural Activities</span
+      >
+    </div>
+    <!-- Bloque 6 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <PermMediaIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span
+        class="font-titling text-3xl text-[#273023] uppercase lg:w-[88%] w-[72%] ml-2"
+        >Aftermovies & Photos</span
+      >
+    </div>
+  </div>
+  <!-- Fila 3 -->
+  <div class="flex flex-col lg:flex-row w-full gap-4">
+    <!-- Bloque 7 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <MdiGymIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span
+        class="font-titling text-3xl text-[#273023] uppercase text-balance lg:w-[72%] ml-2"
+        >Access to Gym, Pool & Recovery Areas</span
+      >
+    </div>
+    <!-- Bloque 8 -->
+    <div
+      class="relative flex-1 bg-[#F3F5F2] flex flex-col justify-between items-start h-72 px-8 lg:py-8 py-4 min-w-[260px] gap-6"
+      style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+    >
+      <FootballPitchIcon class="lg:w-16 lg:h-16 w-12 h-12 ml-4" />
+      <span
+        class="font-titling text-3xl text-[#273023] uppercase text-balance lg:w-[72%] ml-2"
+        >Facilities with FIFA pitches, smart camera towers & more</span
+      >
+    </div>
+  </div>
+</div>
+
+<!-- Facilities Section (añadido desde Figma) -->
+<section class="relative w-full pb-40 lg:pb-24 flex flex-col items-center px-6">
+  <div class="w-full flex flex-col gap-16">
+    <!-- Título y descripción -->
+    <div class="flex flex-col gap-4 items-start lg:px-12">
+      <h2
+        class="font-titling text-5xl lg:text-6xl leading-none uppercase text-[#273023]"
+      >
+        Our high-end<br />facilities
+      </h2>
+      <p
+        class="font-regesto text-xl text-[#273023] lg:max-w-[40%] lg:text-balance"
+      >
+        Train and live like a pro at TENPLE Madrid — a high-performance hub with
+        top-tier pitches, elite gym facilities, recovery zones, and on-site
+        accommodation designed to support every aspect of athletic growth.
+      </p>
+    </div>
+
+    <!-- Grid de imagen y video -->
+    <div
+      class="hidden lg:flex relative w-full flex-col lg:flex-row gap-6 items-center"
+    >
+      <!-- Imagen grande izquierda -->
+      <div class="relative w-full lg:w-1/2 -ml-8">
+        <img
+          src="/images/facilities-1.png"
+          alt="Main facility"
+          class="object-cover w-[700px] h-[800px]"
+        />
+      </div>
+      <!-- Video derecha -->
+      <div class="relative w-full lg:w-1/2">
+        <video
+          src="/assets/facilities/facilities-video.m4v"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full"
+          style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
+        >
+        </video>
+      </div>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <div class="relative w-screen -ml-8 lg:pt-8">
+      <!-- Contenedor de imágenes -->
+      <div class="flex flex-row overflow-x-auto">
+        <div class="h-[480px] flex-shrink-0 overflow-hidden">
+          <img
+            src="/images/facilities-2.png"
+            alt="Facility 2"
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="h-[480px] flex-shrink-0 overflow-hidden -ml-6">
+          <img
+            src="/images/facilities-3.png"
+            alt="Facility 3"
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="h-[480px] w-[414px] flex-shrink-0 overflow-hidden -ml-2">
+          <video
+            src="/assets/facilities/facilities-gallery-video.m4v"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="object-cover w-full h-full"
+            style="clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);"
+          ></video>
+        </div>
+        <div class="h-[480px] flex-shrink-0 overflow-hidden -ml-6">
+          <img
+            src="/images/facilities-4.png"
+            alt="Facility 4"
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="h-[480px] flex-shrink-0 overflow-hidden -ml-6">
+          <img
+            src="/images/facilities-5.png"
+            alt="Facility 5"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+
+      <!-- Flechas de navegación -->
+      <!-- <div class="absolute right-0 lg:-top-12 flex mr-4 mt-8 lg:mt-0">
+        <button
+          class="w-[74px] h-14 bg-[#D4FF7B] opacity-30 flex items-center justify-center"
+          style="clip-path: polygon(0 100%, 20% 0, 100% 0, 80% 100%);"
+        >
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path
+              d="M15.75 7L8.75 14L15.75 21"
+              stroke="#273023"
+              stroke-width="2"></path>
+          </svg>
+        </button>
+        <button
+          class="w-[74px] h-14 bg-[#D4FF7B] flex items-center justify-center"
+          style="clip-path: polygon(0 100%, 20% 0, 100% 0, 80% 100%);"
+        >
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path
+              d="M12.25 7L19.25 14L12.25 21"
+              stroke="#273023"
+              stroke-width="2"></path>
+          </svg>
+        </button>
+      </div> -->
+    </div>
+  </div>
+</section>

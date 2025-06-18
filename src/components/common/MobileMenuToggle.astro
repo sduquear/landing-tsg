@@ -1,0 +1,16 @@
+---
+export interface Props {
+  id: string;
+  icon: string;
+  alt: string;
+}
+const { id, icon, alt } = Astro.props;
+---
+
+<button
+  id={id}
+  class="flex items-center justify-center cursor-pointer"
+  aria-label={alt}
+>
+  <img src={icon} alt={alt} />
+</button>

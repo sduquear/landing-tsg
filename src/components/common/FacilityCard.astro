@@ -1,0 +1,32 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div
+  class="relative h-[60px] w-fit backdrop-blur-[10px] [clip-path:polygon(5%_0%,100%_0%,95%_100%,0_100%)]"
+>
+  <div class="flex h-full items-center bg-white/15 px-4 lg:px-6">
+    <div class="h-[38px] w-[38px] flex-shrink-0">
+      <svg class="h-full w-full" fill="none" viewBox="0 0 38 29">
+        <g>
+          <path
+            d="M0 28.2353L7.52952 0H37.1451L29.8666 28.2353H0Z"
+            fill="#D4FF7B"></path>
+          <path
+            d="M23.5723 14.832H19.2866V19.1177H17.858V14.832H13.5723V13.4034H17.858V9.11768H19.2866V13.4034H23.5723V14.832Z"
+            fill="#46693B"
+            stroke="#46693B"></path>
+        </g>
+      </svg>
+    </div>
+    <span
+      class="font-regesto lg:text-xl text-l leading-none text-white text-nowrap ml-1"
+    >
+      {text}
+    </span>
+  </div>
+</div>

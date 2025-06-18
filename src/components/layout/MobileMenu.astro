@@ -1,0 +1,71 @@
+---
+import Btn from "@/components/common/Btn.astro";
+import MobileMenuToggle from "../common/MobileMenuToggle.astro";
+import LogoGreen from "../../../public/assets/logos/logo-green.svg";
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const isExperiencesPage = currentPath === "/experiences";
+const baseRoute = isExperiencesPage ? "/experiences" : "";
+// Props opcionales si se requiere
+---
+
+<div class="lg:hidden">
+  <!-- <div
+    id="mobile-menu-backdrop"
+    class="fixed inset-0 z-0 bg-black/40 transition-opacity duration-300 ease-in-out"
+    aria-hidden="true"
+  >
+  </div> -->
+  <div
+    id="mobile-menu-overlay"
+    class="fixed left-0 top-0 w-full px-5 z-50 bg-[#D4FF7B] transition-all duration-300 ease-in-out flex flex-col clip-down-right-menu hidden"
+    aria-modal="true"
+    role="dialog"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    {/* Header */}
+    <header class="flex items-center justify-between h-[88px]">
+      <a href="/">
+        <LogoGreen class="h-[48px]" />
+      </a>
+      <MobileMenuToggle
+        id="close-menu-btn"
+        icon="/icons/close.svg"
+        alt="Close menu"
+      />
+    </header>
+
+    {/* Navegación principal */}
+    <nav
+      class="flex-1 flex flex-col justify-center gap-2 pt-10 font-titling font-medium text-[#46693B] text-4xl w-fit"
+      aria-label="Main navigation"
+    >
+      <a href={`${baseRoute}#about`} tabindex="0">ABOUT</a>
+      <a href={`${baseRoute}#services`} tabindex="0">SERVICES</a>
+      <a href={`${baseRoute}#contact`} tabindex="0">CONTACT</a>
+    </nav>
+
+    <div class="py-8">
+      {
+        !isExperiencesPage && (
+          <Btn
+            color="#46693B"
+            textColor="#D4FF7B"
+            text="Sports experiences"
+            href="/experiences"
+          >
+            <img
+              src="/icons/arrow-inclined-light.svg"
+              alt="Sports experiences button"
+            />
+          </Btn>
+        )
+      }
+    </div>
+  </div>
+</div>

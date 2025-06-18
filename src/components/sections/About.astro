@@ -1,0 +1,60 @@
+---
+// About.astro
+import LabelIcon from "@/assets/svg/label.svg";
+import Btn from "@/components/common/Btn.astro";
+import ArrowDownIcon from "../../../public/icons/arrow-down.svg";
+import Partners from "@/components/sections/Partners.astro";
+---
+
+<section
+  id="about"
+  class="w-full bg-white py-24 md:py-24 flex flex-col gap-16 md:gap-16"
+>
+  <!-- Encabezado y descripción -->
+  <div class="flex flex-col gap-8 px-5">
+    <!-- Label con icono -->
+    <div class="flex items-center">
+      <LabelIcon fill="#273023" />
+      <span class="text-s pl-1 pt-1 font-titling uppercase text-[#273023]"
+        >About us</span
+      >
+    </div>
+    <!-- Título -->
+    <h2
+      class="font-regesto text-3xl md:text-[56px] text-[#273023] leading-none tracking-tight"
+    >
+      We specialize in creating, managing, and scaling sports experiences and
+      events that combine travel, training, competition, and professional
+      development.
+    </h2>
+  </div>
+
+  <Partners />
+
+  <!-- Nueva sección tipo Figma: Full-Service Programs -->
+  <div class="flex flex-col items-center md:flex-row gap-16 px-5">
+    <div class="md:w-1/2 flex">
+      <img
+        src="/images/about-img.png"
+        alt="Full Service Programs"
+        class="lg:w-[585px] lg:h-[752px] object-contain"
+        loading="lazy"
+      />
+    </div>
+    <div class="md:w-1/2 flex flex-col justify-center gap-6">
+      <h2 class="text-[#273023] font-titling text-4xl lg:text-7xl leading-none">
+        FULL-SERVICE PROGRAMS
+      </h2>
+      <p class="text-[#273023] font-regesto text-xl lg:text-2xl text-pretty">
+        Our tailored programs are built to deliver more than just logistics —
+        they drive global growth for sports brands while creating meaningful,
+        lasting impact for the people who live them: clubs, athletes, families,
+        and fans.
+      </p>
+      <Btn text="Discover our services" href="#services">
+        <ArrowDownIcon fill="#D4FF7B" />
+      </Btn>
+    </div>
+  </div>
+  <!-- Fin nueva sección tipo Figma -->
+</section>

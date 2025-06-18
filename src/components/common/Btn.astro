@@ -1,0 +1,49 @@
+---
+export interface Props {
+  text: string;
+  href: string;
+  color?: string;
+  textColor?: string;
+}
+const { text, href, color = "#D4FF7B", textColor = "#273023" } = Astro.props;
+---
+
+<div class="relative inline-flex items-center -ml-2">
+  {/* SVG decorativo izquierdo */}
+  <svg
+    class="shrink-0 -mr-px"
+    width="28"
+    height="48"
+    viewBox="0 0 28 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M27.5415 48H0.80127L2.99756 31.7646H17.7495L4.74658 25.2031L11.4683 0H27.5415V48Z"
+      fill={color}></path>
+  </svg>
+  <a
+    href={href}
+    class="flex items-center justify-center h-12 font-titling font-medium uppercase cursor-pointer"
+    style={{
+      background: color,
+      color: textColor,
+    }}
+  >
+    <span class="text-center pt-1" style={{ color: textColor }}>{text}</span>
+    <span class="ml-1 flex items-center">
+      <slot />
+    </span>
+  </a>
+  {/* SVG decorativo derecho */}
+  <svg
+    class="shrink-0 -ml-px"
+    width="13"
+    height="48"
+    viewBox="0 0 13 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0.378174 0H13.0002L2.33325 48H0.378174V0Z" fill={color}></path>
+  </svg>
+</div>

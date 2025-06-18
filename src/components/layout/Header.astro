@@ -1,0 +1,75 @@
+---
+import Btn from "@/components/common/Btn.astro";
+import MobileMenu from "./MobileMenu.astro";
+import MobileMenuToggle from "../common/MobileMenuToggle.astro";
+import LogoLight from "../../../public/assets/logos/logo-light.svg";
+import LogoDark from "../../../public/assets/logos/logo-dark.svg";
+
+export interface Props {
+  textColor?: string;
+}
+
+const currentPath = new URL(Astro.request.url).pathname;
+const isExperiencesPage = currentPath === "/experiences";
+const baseRoute = isExperiencesPage ? "/experiences" : "";
+const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
+---
+
+<header id="main-header" class="absolute top-0 z-50 w-screen p-5">
+  <nav class="flex items-center justify-between uppercase">
+    <div class="flex">
+      <a href="/">
+        {
+          isExperiencesPage ? (
+            <LogoDark class="h-[48px]" />
+          ) : (
+            <LogoLight class="h-[48px]" />
+          )
+        }
+      </a>
+    </div>
+    <div class="flex">
+      <ul
+        class={`hidden lg:flex lg:gap-8 font-titling uppercase cursor-pointer`}
+        style={`color: ${textColor}`}
+      >
+        <li>
+          <a href={`${baseRoute}#about`} class="hover:text-[#d4ff7b]">About</a>
+        </li>
+        <li>
+          <a href={`${baseRoute}#services`} class="hover:text-[#d4ff7b]"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href={`${baseRoute}#contact`} class="hover:text-[#d4ff7b]"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+    {
+      !isExperiencesPage && (
+        <div class="hidden lg:flex">
+          <Btn text="Sports experiences" href="/experiences">
+            <img
+              src="/icons/arrow-inclined-dark.svg"
+              alt="Sports experiences button"
+            />
+          </Btn>
+        </div>
+      )
+    }
+    <div class="flex lg:hidden">
+      <MobileMenuToggle
+        id="open-menu-btn"
+        icon="/icons/hamburger.svg"
+        alt="Open menu"
+      />
+    </div>
+  </nav>
+  <MobileMenu currentPath={currentPath} />
+</header>
+
+<script src="/src/scripts/mobileMenu.js"></script>
+<!-- <script src="/src/scripts/headerBlurOnScroll.js"></script> -->

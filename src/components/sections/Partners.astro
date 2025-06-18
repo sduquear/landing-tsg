@@ -1,0 +1,80 @@
+---
+// Partners.astro
+---
+
+<!-- Carrusel de partners -->
+<div class="flex flex-col">
+  <span class="text-lg font-regesto text-[#273023] mb-6 px-5">
+    Our partners:
+  </span>
+  <div class="flex overflow-x-scroll">
+    <div class="flex">
+      <!-- Partner: Rayo Vallecano -->
+      <div
+        class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -ml-6 -mr-8 md:-ml-12 md:-mr-14"
+      >
+        <img
+          src="/assets/partners/partner-rayo-vallecano.svg"
+          alt="Rayo Vallecano"
+          class="h-14 md:h-20 object-contain"
+        />
+      </div>
+      <!-- Partner: Atlético Madrid -->
+      <div
+        class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+      >
+        <img
+          src="/assets/partners/partner-atletico-madrid.svg"
+          alt="Atlético Madrid"
+          class="h-14 md:h-20 object-contain"
+        />
+      </div>
+      <!-- Partner: Leganés -->
+      <div
+        class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+      >
+        <img
+          src="/assets/partners/partner-leganes.svg"
+          alt="Leganés"
+          class="h-14 md:h-20 object-contain"
+        />
+      </div>
+      <!-- Partner: Adidas -->
+      <div
+        class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+      >
+        <img
+          src="/assets/partners/partner-adidas.svg"
+          alt="Adidas"
+          class="h-14 md:h-20 object-contain"
+        />
+      </div>
+      <!-- Partner: Tenple -->
+      <div
+        class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+      >
+        <img
+          src="/assets/partners/partner-tenple.svg"
+          alt="Tenple"
+          class="md:h-6 object-contain p-12 md:p-0"
+        />
+      </div>
+      <!-- Partner: Real Madrid -->
+      <div
+        class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-12"
+      >
+        <img
+          src="/assets/partners/partner-real-madrid.svg"
+          alt="Real Madrid"
+          class="h-14 md:h-24 object-contain"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin carrusel de partners -->
+<style>
+  .partner-card {
+    clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
+  }
+</style>

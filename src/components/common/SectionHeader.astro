@@ -1,0 +1,38 @@
+---
+import LabelIcon from "@/assets/svg/label.svg";
+const {
+  label,
+  labelColor = "#D4FF7B",
+  title,
+  titleColor = "#273023",
+  class: extraClass = "",
+  titleClass: titleExtraClass = "",
+} = Astro.props;
+---
+
+<div class={`flex flex-col ${extraClass}`}>
+  {
+    label && (
+      <div class="flex items-center">
+        <LabelIcon fill={labelColor} />
+        <span
+          class={`text-s font-titling uppercase pt-1 pl-1`}
+          style={`color: ${labelColor}`}
+        >
+          {label}
+        </span>
+      </div>
+    )
+  }
+  {
+    title && (
+      <h2
+        class={`my-6 font-titling text-3xl md:text-5xl lg:text-7xl leading-none uppercase tracking-tight ${titleExtraClass}`}
+        style={`color: ${titleColor}`}
+      >
+        {title}
+      </h2>
+    )
+  }
+  <slot />
+</div>

@@ -1,0 +1,83 @@
+---
+// Facilities.astro
+import SectionHeader from "../common/SectionHeader.astro";
+import Btn from "../common/Btn.astro";
+import FacilityCard from "../common/FacilityCard.astro";
+import ArrowInclinedDarkIcon from "../../../public/icons/arrow-inclined-dark.svg";
+
+const facilities = [
+  {
+    text: "Two FIFA-standard football pitches",
+  },
+  {
+    text: "Pool, classrooms, study & leisure areas",
+  },
+  {
+    text: "Fully equipped gym & recovery zones",
+  },
+  {
+    text: "Cafeteria, garden spaces and more",
+  },
+  {
+    text: "On-site residence with full board",
+  },
+  {
+    text: "Game rooms, media lounges & meeting room",
+  },
+];
+---
+
+<section
+  class="relative flex h-screen w-screen flex-col px-6 py-12"
+  style="background: linear-gradient(0deg, rgba(39, 48, 35, 0.20) 0%, rgba(39, 48, 35, 0.20) 100%), linear-gradient(139deg, rgba(39, 48, 35, 0.00) 56.75%, rgba(39, 48, 35, 0.40) 90.15%), url('/images/facilities-bg.jpg') lightgray 50% / cover no-repeat;"
+>
+  <div class="flex flex-col">
+    <SectionHeader
+      label="Our facilities"
+      labelColor="#D4FF7B"
+      title="Train and live like the pros"
+      titleColor="#D4FF7B"
+      titleClass="lg:text-9xl md:text-8xl text-5xl w-[84%] text-balance"
+    />
+  </div>
+
+  <div class="flex flex-col">
+    <Btn
+      href="mailto:sales@totalsportsgroup.es"
+      color="#D4FF7B"
+      text="Start your journey"
+    >
+      <ArrowInclinedDarkIcon />
+    </Btn>
+  </div>
+
+  <div class="flex flex-col h-full lg:items-end items-start justify-end gap-2">
+    <div class="flex lg:flex-row flex-col gap-2">
+      <div class="flex flex-col lg:-ml-0 -ml-4">
+        <FacilityCard text="Two FIFA-standard football pitches" />
+      </div>
+      <div class="hidden lg:flex flex-col">
+        <FacilityCard text="Pool, classrooms, study & leisure areas" />
+      </div>
+      <div class="lg:hidden flex flex-col">
+        <FacilityCard text="Cafeteria, garden spaces and more" />
+      </div>
+    </div>
+    <div class="hidden lg:flex lg:flex-row flex-col gap-2">
+      <div class="flex flex-col">
+        <FacilityCard text="Fully equipped gym & recovery zones" />
+      </div>
+      <div class="flex flex-col">
+        <FacilityCard text="Cafeteria, garden spaces and more" />
+      </div>
+    </div>
+    <div class="hidden lg:flex lg:flex-row flex-col gap-2">
+      <div class="flex flex-col">
+        <FacilityCard text="On-site residence with full board" />
+      </div>
+      <div class="flex flex-col">
+        <FacilityCard text="Game rooms, media lounges & meeting room" />
+      </div>
+    </div>
+  </div>
+</section>

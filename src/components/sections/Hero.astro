@@ -1,0 +1,41 @@
+---
+// Hero.astro
+import Btn from "@/components/common/Btn.astro";
+import ArrowDownIcon from "../../../public/icons/arrow-down.svg";
+---
+
+<section
+  class="relative flex min-h-screen w-full px-5 clip-down-right-hero_mobile lg:clip-down-right-hero_desktop"
+>
+  <video
+    src="/assets/hero/hero-video.m4v"
+    autoplay
+    loop
+    muted
+    playsinline
+    class="absolute top-0 left-0 w-full h-full z-[-1] object-none"></video>
+
+  <div class="absolute top-0 left-0 w-full h-full z-[-1] bg-[#273023]/40"></div>
+
+  <div class="relative flex w-full flex-col lg:pt-28">
+    <!-- <slot name="header" /> -->
+    <div class="flex flex-1 flex-col justify-end lg:flex-0 py-10">
+      <h1
+        class="text-[clamp(2.5rem,8vw,5.5rem)] leading-none uppercase text-white font-titling lg:w-[80%] text-balance"
+      >
+        We connect sport, talent, and unique experiences on a global scale.
+      </h1>
+      <div class="flex flex-col lg:pt-8 lg:w-[24%] lg:ml-auto">
+        <p
+          class="text-white text-regesto font-bold text-[clamp(1rem,2.5vw,1.125rem)] py-4 tracking-tight"
+        >
+          From tailored football tours to long-term athlete development, TSG
+          designs unforgettable journeys that go beyond the pitch.
+        </p>
+        <Btn text="Discover more" href="#about">
+          <ArrowDownIcon fill="#D4FF7B" />
+        </Btn>
+      </div>
+    </div>
+  </div>
+</section>

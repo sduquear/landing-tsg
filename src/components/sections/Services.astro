@@ -1,0 +1,170 @@
+---
+// Services.astro
+import SectionHeader from "../common/SectionHeader.astro";
+import PlusIcon from "@/assets/svg/plus.svg";
+
+// Estilos para la animación del plus
+const plusStyles = `
+  :global(.plus-cross) {
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  :global(.group:hover .plus-cross) {
+    transform: rotate(90deg);
+  }
+`;
+---
+
+<style>
+  :global(.plus-cross) {
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  :global(.group:hover .plus-cross) {
+    transform: rotate(90deg);
+  }
+</style>
+
+<section id="services" class="bg-[#273023] py-20 w-full flex flex-col">
+  <SectionHeader
+    label="What we do"
+    labelColor="#D4FF7B"
+    title="Explore our services"
+    titleColor="#FFF"
+    class="px-10"
+    titleClass="w-[50%]"
+  />
+
+  <div
+    class="flex overflow-x-auto scrollbar-hide lg:gap-2 gap-4 px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+  >
+    <!-- Card 1 -->
+    <a href="/experiences" class="block">
+      <div
+        class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
+        style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+      >
+        <div
+          class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+        >
+          Sports experiences
+        </div>
+        <div
+          class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
+        >
+          <div
+            class="w-full h-full bg-cover bg-no-repeat bg-center transition-all duration-300 group-hover:scale-104"
+            style="background-image: url('/images/sports_experiences.png');"
+          >
+          </div>
+        </div>
+        <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+      </div>
+    </a>
+    <!-- Card 2 -->
+    <div
+      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
+      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+    >
+      <div
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+      >
+        Sports tourism
+      </div>
+      <div
+        class="w-[404px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
+      >
+        <div
+          class="w-full h-full bg-cover bg-no-repeat bg-center transition-all duration-300 group-hover:scale-104"
+          style="background-image: url('/images/sports_tourism.png');"
+        >
+        </div>
+      </div>
+      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+    </div>
+    <!-- Card 3 -->
+    <div
+      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
+      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+    >
+      <div
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+      >
+        Talent development
+      </div>
+      <div
+        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
+      >
+        <div
+          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
+          style="background-image: url('/images/talent_development.png');"
+        >
+        </div>
+      </div>
+      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+    </div>
+    <!-- Card 4 -->
+    <div
+      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
+      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+    >
+      <div
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+      >
+        Travel Management
+      </div>
+      <div
+        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
+      >
+        <div
+          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
+          style="background-image: url('/images/travel_management.png');"
+        >
+        </div>
+      </div>
+      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+    </div>
+    <!-- Card 5 -->
+    <div
+      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
+      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+    >
+      <div
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+      >
+        Event creation & management
+      </div>
+      <div
+        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
+      >
+        <div
+          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
+          style="background-image: url('/images/event_creation_management.png');"
+        >
+        </div>
+      </div>
+      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+    </div>
+    <!-- Card 6 -->
+    <div
+      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
+      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+    >
+      <div
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+      >
+        Sports consulting
+      </div>
+      <div
+        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
+      >
+        <div
+          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
+          style="background-image: url('/images/sports_consulting.png');"
+        >
+        </div>
+      </div>
+      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+---
+// SportsExperiences.astro
+import SectionHeader from "../common/SectionHeader.astro";
+import ArrowDownIcon from "../../../public/icons/arrow-down.svg";
+import DecoratorIcon from "@/assets/svg/decorator.svg";
+import Btn from "@/components/common/Btn.astro";
+---
+
+<section class="relative w-full overflow-hidden px-6 pt-40">
+  <div class="flex flex-col lg:flex-row lg:pl-6">
+    <div class="lg:w-2/3 lg:flex flex-col">
+      <SectionHeader
+        label="Sports experiences"
+        labelColor="#273023"
+        title="Unique, Fully Managed Football Experiences in Spain"
+        titleColor="#273023"
+        class="text-balance"
+      />
+    </div>
+    <div
+      class="lg:w-1/3 flex flex-row lg:justify-end lg:items-end items-center mb-6"
+    >
+      <Btn text="Discover more" color="#FFF" href="#about">
+        <ArrowDownIcon fill="#FFF" />
+      </Btn>
+    </div>
+  </div>
+  <DecoratorIcon class="hidden lg:block absolute top-224 z-10" />
+  <div
+    class="flex flex-col w-full h-full"
+    style="clip-path: polygon(2% 0, 99% 0, 97% 100%, 0% 100%);"
+  >
+    <video
+      src="/assets/hero/hero-video.m4v"
+      autoplay
+      loop
+      muted
+      playsinline
+      class="w-full h-full object-none"></video>
+  </div>
+</section>

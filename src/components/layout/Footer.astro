@@ -1,0 +1,127 @@
+---
+// Footer.astro
+import LabelIcon from "@/assets/svg/label.svg";
+import Btn from "@/components/common/Btn.astro";
+import ArrowInclinedLightIcon from "../../../public/icons/arrow-inclined-light.svg";
+
+const LOGO_URL = "assets/logos/logo-green.svg";
+const FOOTER_IMAGE_URL = "/images/footer-img.png";
+---
+
+<footer id="contact" class="bg-[#D4FF7B] text-[#46693B] px-6 py-12">
+  <div class="flex flex-col lg:flex-row lg:gap-8">
+    <div class="lg:w-2/3 flex flex-col">
+      <div class="flex flex-col">
+        <div class="flex items-center">
+          <LabelIcon fill="#46693B" />
+          <span class="text-s pl-1 pt-1 font-titling uppercase"
+            >Get in touch</span
+          >
+        </div>
+        <h2
+          class="font-titling uppercase text-4xl lg:text-7xl leading-none my-6 text-balance"
+        >
+          Want to learn more about our sports experiences?
+        </h2>
+        <Btn
+          href="mailto:sales@totalsportsgroup.es"
+          color="#46693B"
+          textColor="#D4FF7B"
+          text="Drop us a message"
+        >
+          <ArrowInclinedLightIcon />
+        </Btn>
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row justify-between my-8 lg:my-0 lg:mt-16"
+      >
+        <nav class="flex flex-col uppercase font-titling text-3xl gap-1">
+          <a href="/experiences" class="hover:underline">Sports experiences</a>
+          <a href="/#about" class="hover:underline w-fit">About</a>
+          <a href="#services" class="hover:underline w-fit">Services</a>
+          <a href="#contact" class="hover:underline w-fit">Contact</a>
+        </nav>
+        <div class="lg:flex flex-col hidden lg:basis-1/3">
+          <span class="uppercase font-titling">Follow us :</span>
+          <a
+            href="https://www.instagram.com/tsg_totalsportsgroup/"
+            target="_blank"
+            rel="noopener"
+            class="font-regesto hover:underline">Instagram</a
+          >
+          <a
+            href="https://www.linkedin.com/company/total-sports-group/about/"
+            target="_blank"
+            rel="noopener"
+            class="font-regesto hover:underline">LinkedIn</a
+          >
+        </div>
+      </div>
+
+      <div class="hidden lg:block">
+        <hr class="h-px bg-[#46693B]/40 border-0 my-5" />
+        <div class="flex flex-row justify-between gap-4 text-sm items-center">
+          <div class="flex flex-row gap-4">
+            <span class="font-titling uppercase pt-[1px]"
+              >©Total sports group</span
+            >
+            <span class="font-regesto"
+              >Calle Nuria, 80, 28034 Madrid, Spain</span
+            >
+          </div>
+          <div class="flex flex-row basis-1/3 gap-4 font-regesto">
+            <a class="hover:underline">Privacy Statement</a>
+            <a class="hover:underline">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:hidden">
+        <div class="flex justify-between text-base">
+          <div class="flex flex-col gap-1">
+            <span class="uppercase font-titling">Follow us :</span>
+            <a
+              href="https://www.instagram.com/tsg_totalsportsgroup/"
+              target="_blank"
+              rel="noopener"
+              class="font-regesto hover:underline">Instagram</a
+            >
+            <a
+              href="https://www.linkedin.com/company/total-sports-group/about/"
+              target="_blank"
+              rel="noopener"
+              class="font-regesto hover:underline">LinkedIn</a
+            >
+          </div>
+          <div class="flex flex-col text-right gap-1">
+            <span class="font-titling uppercase">©Total sports group</span>
+            <span class="font-regesto">Calle Nuria, 80</span>
+            <span class="font-regesto">28034 Madrid, Spain</span>
+          </div>
+        </div>
+
+        <hr class="h-px bg-[#46693B]/40 border-0 my-4" />
+
+        <div class="flex justify-between font-regesto text-base">
+          <a class="hover:underline">Privacy Statement</a>
+          <a class="hover:underline">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden lg:flex lg:w-1/3 flex-col justify-between items-end">
+      <img
+        src={LOGO_URL}
+        alt="Total Sports Group Logo"
+        class="w-[160px] h-[50px]"
+      />
+      <img
+        src={FOOTER_IMAGE_URL}
+        class="h-[432px] object-cover mt-4"
+        alt="Young athletes"
+      />
+      <span class="font-regesto text-sm">Design by Dylan. Code by Sebas.</span>
+    </div>
+  </div>
+</footer>

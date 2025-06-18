@@ -1,0 +1,255 @@
+---
+// WhatWeOffer.astro
+import SectionHeader from "../common/SectionHeader.astro";
+import Btn from "../common/Btn.astro";
+import ArrowDownIcon from "../../../public/icons/arrow-inclined-dark.svg";
+---
+
+<section class="flex flex-col px-6 py-16">
+  <SectionHeader
+    label="What we offer"
+    labelColor="#273023"
+    title="What makes our experiences unique"
+    titleColor="#273023"
+    titleClass="w-[72%]"
+  />
+  <!-- CARD 1 -->
+  <div class="relative w-full mt-6 flex justify-center">
+    <!-- Capa exterior: borde -->
+    <div
+      class="absolute inset-0 z-0 w-full h-full bg-[#D9E5D5] [clip-path:polygon(2.4%_1%,99.8%_1%,97.8%_99%,0.2%_99%)]"
+    >
+    </div>
+    <!-- Capa interior: fondo y contenido -->
+    <div
+      class="relative flex lg:flex-row flex-col justify-start min-h-[362px] py-8 px-6 bg-white w-full gap-6"
+      style="clip-path: polygon(2.6% 2%, 99.6% 2%, 97.6% 98%, 0.4% 98%);"
+    >
+      <!-- Imagen decorativa a la izquierda -->
+      <div class="flex flex-col lg:w-1/3">
+        <div
+          class="bg-cover bg-center lg:w-[320px] lg:h-[300px] md:w-[480px] md:h-[340px] w-[280px] h-[200px] lg:[clip-path:polygon(8%_0,100%_0,92%_100%,0_100%)]"
+          style="background-image: url('/images/what-we-offer-1.png');"
+        >
+        </div>
+      </div>
+      <!-- Contenido principal alineado a la izquierda -->
+      <div class="flex flex-col gap-4 justify-center lg:w-2/3 lg:ml-6">
+        <div class="font-titling text-4xl uppercase text-[#273023]">
+          Custom Training Programs
+        </div>
+        <div
+          class="font-regesto font-bold text-lg text-[#273023] max-w-xl leading-6"
+        >
+          Led by UEFA-certified coaches and specialists (physical trainers,
+          goalkeeper coaches, tactical experts). Every session is built around
+          the needs of your players.
+        </div>
+      </div>
+      <!-- Número decorativo -->
+      <div
+        class="absolute right-2 lg:right-8 lg:top-4 top-6 w-[64px] h-[64px]"
+        style="clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); background: #FFF;"
+      >
+      </div>
+      <span
+        class="absolute right-4 lg:right-8 lg:top-8 top-10 opacity-30 text-[#273023] lg:text-5xl text-4xl font-titling uppercase"
+      >
+        01
+      </span>
+    </div>
+  </div>
+  <!-- CARD 2 -->
+  <div class="relative w-full mt-4 flex justify-center">
+    <!-- Capa exterior: borde -->
+    <div
+      class="absolute inset-0 z-0 w-full h-full bg-[#D9E5D5] [clip-path:polygon(2.2%_1%,99.8%_1%,97.8%_99%,0.2%_99%)]"
+    >
+    </div>
+    <!-- Capa interior: fondo y contenido -->
+    <div
+      class="relative flex lg:flex-row flex-col justify-start min-h-[362px] py-8 px-6 bg-white w-full gap-6"
+      style="clip-path: polygon(2.4% 2%, 99.6% 2%, 97.6% 98%, 0.4% 98%);"
+    >
+      <!-- Imagen decorativa a la izquierda -->
+      <div class="flex flex-col lg:w-1/3">
+        <div
+          class="bg-cover bg-center lg:w-[320px] lg:h-[300px] md:w-[480px] md:h-[340px] w-[280px] h-[200px] lg:[clip-path:polygon(8%_0,100%_0,92%_100%,0_100%)]"
+          style="background-image: url('/images/what-we-offer-2.png');"
+        >
+        </div>
+      </div>
+      <!-- Contenido principal alineado a la izquierda -->
+      <div class="flex flex-col gap-4 justify-center lg:w-2/3 lg:ml-6">
+        <div class="font-titling text-4xl uppercase text-[#273023]">
+          Compete Against Local Academies
+        </div>
+        <div
+          class="font-regesto font-bold text-lg text-[#273023] max-w-xl leading-6"
+        >
+          Friendly matches and shared sessions with youth teams from LaLiga
+          clubs like Atlético de Madrid, Getafe CF, Rayo Vallecano, CD Leganés,
+          and more.
+        </div>
+      </div>
+      <!-- Número decorativo -->
+      <div
+        class="absolute right-2 lg:right-8 lg:top-4 top-6 w-[64px] h-[64px]"
+        style="clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); background: #FFF;"
+      >
+      </div>
+      <span
+        class="absolute right-4 lg:right-8 lg:top-8 top-10 opacity-30 text-[#273023] lg:text-5xl text-4xl font-titling uppercase"
+      >
+        02
+      </span>
+    </div>
+  </div>
+  <!-- CARD 3 -->
+  <div class="relative w-full mt-4 flex justify-center">
+    <!-- Capa exterior: borde -->
+    <div
+      class="absolute inset-0 z-0 w-full h-full bg-[#D9E5D5] [clip-path:polygon(2.2%_1%,99.8%_1%,97.8%_99%,0.2%_99%)]"
+    >
+    </div>
+    <!-- Capa interior: fondo y contenido -->
+    <div
+      class="relative flex lg:flex-row flex-col justify-start min-h-[362px] py-8 px-6 bg-white w-full gap-6"
+      style="clip-path: polygon(2.4% 2%, 99.6% 2%, 97.6% 98%, 0.4% 98%);"
+    >
+      <!-- Imagen decorativa a la izquierda -->
+      <div class="flex flex-col lg:w-1/3">
+        <div
+          class="bg-cover bg-center lg:w-[320px] lg:h-[300px] md:w-[480px] md:h-[340px] w-[280px] h-[200px] lg:[clip-path:polygon(8%_0,100%_0,92%_100%,0_100%)]"
+          style="background-image: url('/images/what-we-offer-3.png');"
+        >
+        </div>
+      </div>
+      <!-- Contenido principal alineado a la izquierda -->
+      <div class="flex flex-col gap-4 justify-center lg:w-2/3 lg:ml-6">
+        <div class="font-titling text-4xl uppercase text-[#273023]">
+          Play in Top Tournaments
+        </div>
+        <div
+          class="font-regesto font-bold text-lg text-[#273023] max-w-xl leading-6"
+        >
+          Participation in international tournaments such as <span
+            class="underline">MadCup, MIC,</span
+          > or your own private event—fully organized.
+        </div>
+      </div>
+      <!-- Número decorativo -->
+      <div
+        class="absolute right-2 lg:right-8 lg:top-4 top-6 w-[64px] h-[64px]"
+        style="clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); background: #FFF;"
+      >
+      </div>
+      <span
+        class="absolute right-4 lg:right-8 lg:top-8 top-10 opacity-30 text-[#273023] lg:text-5xl text-4xl font-titling uppercase"
+      >
+        03
+      </span>
+    </div>
+  </div>
+  <!-- CARD 4 -->
+  <div class="relative w-full mt-4 flex justify-center">
+    <!-- Capa exterior: borde -->
+    <div
+      class="absolute inset-0 z-0 w-full h-full bg-[#D9E5D5] [clip-path:polygon(2.2%_1%,99.8%_1%,97.8%_99%,0.2%_99%)]"
+    >
+    </div>
+    <!-- Capa interior: fondo y contenido -->
+    <div
+      class="relative flex lg:flex-row flex-col justify-start min-h-[362px] py-8 px-6 bg-white w-full gap-6"
+      style="clip-path: polygon(2.4% 2%, 99.6% 2%, 97.6% 98%, 0.4% 98%);"
+    >
+      <!-- Imagen decorativa a la izquierda -->
+      <div class="flex flex-col lg:w-1/3">
+        <div
+          class="bg-cover bg-center lg:w-[320px] lg:h-[300px] md:w-[480px] md:h-[340px] w-[280px] h-[200px] lg:[clip-path:polygon(8%_0,100%_0,92%_100%,0_100%)]"
+          style="background-image: url('/images/what-we-offer-4.png');"
+        >
+        </div>
+      </div>
+      <!-- Contenido principal alineado a la izquierda -->
+      <div class="flex flex-col gap-4 justify-center lg:w-2/3 lg:ml-6">
+        <div class="font-titling text-4xl uppercase text-[#273023]">
+          Live Football at Its Finest
+        </div>
+        <div
+          class="font-regesto font-bold text-lg text-[#273023] max-w-xl leading-6"
+        >
+          Attend LaLiga and Champions League matches live, for an unforgettable
+          spectator experience.
+        </div>
+      </div>
+      <!-- Número decorativo -->
+      <div
+        class="absolute right-2 lg:right-8 lg:top-4 top-6 w-[64px] h-[64px]"
+        style="clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); background: #FFF;"
+      >
+      </div>
+      <span
+        class="absolute right-4 lg:right-8 lg:top-8 top-10 opacity-30 text-[#273023] lg:text-5xl text-4xl font-titling uppercase"
+      >
+        04
+      </span>
+    </div>
+  </div>
+  <!-- CARD 5 -->
+  <div class="relative w-full mt-4 flex justify-center">
+    <!-- Capa exterior: borde -->
+    <div
+      class="absolute inset-0 z-0 w-full h-full bg-[#D9E5D5] [clip-path:polygon(2.2%_1%,99.8%_1%,97.8%_99%,0.2%_99%)]"
+    >
+    </div>
+    <!-- Capa interior: fondo y contenido -->
+    <div
+      class="relative flex lg:flex-row flex-col justify-start min-h-[362px] py-8 px-6 bg-white w-full gap-6"
+      style="clip-path: polygon(2.4% 2%, 99.6% 2%, 97.6% 98%, 0.4% 98%);"
+    >
+      <!-- Imagen decorativa a la izquierda -->
+      <div class="flex flex-col lg:w-1/3">
+        <div
+          class="bg-cover bg-center lg:w-[320px] lg:h-[300px] md:w-[480px] md:h-[340px] w-[280px] h-[200px] lg:[clip-path:polygon(8%_0,100%_0,92%_100%,0_100%)]"
+          style="background-image: url('/images/what-we-offer-5.png');"
+        >
+        </div>
+      </div>
+      <!-- Contenido principal alineado a la izquierda -->
+      <div class="flex flex-col gap-4 justify-center lg:w-2/3 lg:ml-6">
+        <div class="font-titling text-4xl uppercase text-[#273023]">
+          Cultural Football Add-ons
+        </div>
+        <div
+          class="font-regesto font-bold text-lg text-[#273023] max-w-xl leading-6"
+        >
+          Guided visits to iconic stadiums like the Santiago Bernabéu or the
+          Cívitas Metropolitano, plus immersive visits to <span
+            class="underline">The Legends Museum</span
+          > in Madrid.
+        </div>
+      </div>
+      <!-- Número decorativo -->
+      <div
+        class="absolute right-2 lg:right-8 lg:top-4 top-6 w-[64px] h-[64px]"
+        style="clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); background: #FFF;"
+      >
+      </div>
+      <span
+        class="absolute right-4 lg:right-8 lg:top-8 top-10 opacity-30 text-[#273023] lg:text-5xl text-4xl font-titling uppercase"
+      >
+        05
+      </span>
+    </div>
+  </div>
+  <div class="flex justify-end mr-8 mt-8">
+    <Btn
+      href="mailto:sales@totalsportsgroup.es"
+      text="Start your journey"
+      color="#D4FF7B"
+    >
+      <ArrowDownIcon fill="#D4FF7B" />
+    </Btn>
+  </div>
+</section>
