@@ -3,8 +3,7 @@
 import LabelIcon from "@/assets/svg/label.svg";
 import Btn from "@/components/common/Btn.astro";
 import ArrowInclinedLightIcon from "../../../public/icons/arrow-inclined-light.svg";
-
-const LOGO_URL = "assets/logos/logo-green.svg";
+import LogoGreen from "@/assets/logos/logo-green.svg";
 const FOOTER_IMAGE_URL = "/images/footer-img.png";
 ---
 
@@ -111,11 +110,7 @@ const FOOTER_IMAGE_URL = "/images/footer-img.png";
     </div>
 
     <div class="hidden lg:flex lg:w-1/3 flex-col justify-between items-end">
-      <img
-        src={LOGO_URL}
-        alt="Total Sports Group Logo"
-        class="w-[160px] h-[50px]"
-      />
+      <LogoGreen class="w-[160px] h-[50px]" />
       <img
         src={FOOTER_IMAGE_URL}
         class="h-[432px] object-cover mt-4"
