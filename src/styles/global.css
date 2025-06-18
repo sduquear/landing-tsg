@@ -9,16 +9,18 @@ html, body {
   font-family: 'Regesto Grotesk';
   src: url('src/assets/fonts/RegestoGrotesk-Bold.woff2') format('woff2');
   font-weight: 700;
-  font-style: bold;
+  font-style: normal;
   font-display: swap;
+  font-synthesis: none;
 }
 
 @font-face {
   font-family: 'Titling Gothic FB';
   src: url('src/assets/fonts/TitlingGothicFBCond-Med.woff2') format('woff2');
   font-weight: 500;
-  font-style: medium;
+  font-style: normal;
   font-display: swap;
+  font-synthesis: none;
 }
 
 @theme {
