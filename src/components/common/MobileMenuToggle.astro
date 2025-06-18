@@ -1,16 +1,18 @@
 ---
+import CloseIcon from "@/assets/icons/close.svg";
+import HamburgerIcon from "@/assets/icons/hamburger.svg";
+
 export interface Props {
   id: string;
-  icon: string;
-  alt: string;
+  isOpen: boolean;
 }
-const { id, icon, alt } = Astro.props;
+const { id, isOpen } = Astro.props;
 ---
 
 <button
   id={id}
   class="flex items-center justify-center cursor-pointer"
-  aria-label={alt}
+  aria-label={isOpen ? "Close menu" : "Open menu"}
 >
-  <img src={icon} alt={alt} />
+  {isOpen ? <CloseIcon /> : <HamburgerIcon />}
 </button>

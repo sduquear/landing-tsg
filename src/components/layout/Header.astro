@@ -4,7 +4,7 @@ import MobileMenu from "./MobileMenu.astro";
 import MobileMenuToggle from "@/components/common/MobileMenuToggle.astro";
 import LogoLight from "@/assets/logos/logo-light.svg";
 import LogoDark from "@/assets/logos/logo-dark.svg";
-
+import ArrowInclinedDarkIcon from "@/assets/icons/arrow-inclined-dark.svg";
 export interface Props {
   textColor?: string;
 }
@@ -52,20 +52,13 @@ const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
       !isExperiencesPage && (
         <div class="hidden lg:flex">
           <Btn text="Sports experiences" href="/experiences">
-            <img
-              src="src/assets/icons/arrow-inclined-dark.svg"
-              alt="Sports experiences button"
-            />
+            <ArrowInclinedDarkIcon />
           </Btn>
         </div>
       )
     }
     <div class="flex lg:hidden">
-      <MobileMenuToggle
-        id="open-menu-btn"
-        icon="src/assets/icons/hamburger.svg"
-        alt="Open menu"
-      />
+      <MobileMenuToggle id="open-menu-btn" isOpen={false} />
     </div>
   </nav>
   <MobileMenu currentPath={currentPath} />

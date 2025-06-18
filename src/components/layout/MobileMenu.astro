@@ -2,7 +2,7 @@
 import Btn from "@/components/common/Btn.astro";
 import MobileMenuToggle from "@/components/common/MobileMenuToggle.astro";
 import LogoGreen from "@/assets/logos/logo-green.svg";
-
+import ArrowInclinedLightIcon from "@/assets/icons/arrow-inclined-light.svg";
 interface Props {
   currentPath: string;
 }
@@ -33,11 +33,7 @@ const baseRoute = isExperiencesPage ? "/experiences" : "";
       <a href="/">
         <LogoGreen class="h-[48px]" />
       </a>
-      <MobileMenuToggle
-        id="close-menu-btn"
-        icon="src/assets/icons/close.svg"
-        alt="Close menu"
-      />
+      <MobileMenuToggle id="close-menu-btn" isOpen={true} />
     </header>
 
     {/* Navegación principal */}
@@ -59,10 +55,7 @@ const baseRoute = isExperiencesPage ? "/experiences" : "";
             text="Sports experiences"
             href="/experiences"
           >
-            <img
-              src="src/assets/icons/arrow-inclined-light.svg"
-              alt="Sports experiences button"
-            />
+            <ArrowInclinedLightIcon />
           </Btn>
         )
       }
