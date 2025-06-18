@@ -1,7 +1,7 @@
 ---
 import Btn from "@/components/common/Btn.astro";
 import MobileMenu from "./MobileMenu.astro";
-import MobileMenuToggle from "../common/MobileMenuToggle.astro";
+import MobileMenuToggle from "@/components/common/MobileMenuToggle.astro";
 import LogoLight from "@/assets/logos/logo-light.svg";
 import LogoDark from "@/assets/logos/logo-dark.svg";
 
@@ -53,7 +53,7 @@ const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
         <div class="hidden lg:flex">
           <Btn text="Sports experiences" href="/experiences">
             <img
-              src="/icons/arrow-inclined-dark.svg"
+              src="src/assets/icons/arrow-inclined-dark.svg"
               alt="Sports experiences button"
             />
           </Btn>
@@ -63,7 +63,7 @@ const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
     <div class="flex lg:hidden">
       <MobileMenuToggle
         id="open-menu-btn"
-        icon="/icons/hamburger.svg"
+        icon="src/assets/icons/hamburger.svg"
         alt="Open menu"
       />
     </div>

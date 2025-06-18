@@ -1,14 +1,14 @@
 ---
 // AllIn.astro
-import SectionHeader from "../common/SectionHeader.astro";
-import FootballPlayIcon from "@/assets/svg/football-play.svg";
-import VideoCheckIcon from "@/assets/svg/video-check.svg";
-import HotelIcon from "@/assets/svg/hotel.svg";
-import BusIcon from "@/assets/svg/bus.svg";
-import WhiteBalanceSunnyIcon from "@/assets/svg/white-balance-sunny.svg";
-import PermMediaIcon from "@/assets/svg/perm-media.svg";
-import MdiGymIcon from "@/assets/svg/mdi_gym.svg";
-import FootballPitchIcon from "@/assets/svg/football-pitch.svg";
+import SectionHeader from "@/components/common/SectionHeader.astro";
+import FootballPlayIcon from "@/assets/icons/football-play.svg";
+import VideoCheckIcon from "@/assets/icons/video-check.svg";
+import HotelIcon from "@/assets/icons/hotel.svg";
+import BusIcon from "@/assets/icons/bus.svg";
+import WhiteBalanceSunnyIcon from "@/assets/icons/white-balance-sunny.svg";
+import PermMediaIcon from "@/assets/icons/perm-media.svg";
+import MdiGymIcon from "@/assets/icons/gym.svg";
+import FootballPitchIcon from "@/assets/icons/football-pitch.svg";
 ---
 
 <section class="relative w-full pt-24">
@@ -17,7 +17,7 @@ import FootballPitchIcon from "@/assets/svg/football-pitch.svg";
     style="clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);"
   >
     <video
-      src="/assets/all-in/all-in-video.m4v"
+      src="src/assets/videos/all-in.mp4"
       autoplay
       loop
       muted
@@ -169,7 +169,7 @@ import FootballPitchIcon from "@/assets/svg/football-pitch.svg";
       <!-- Imagen grande izquierda -->
       <div class="relative w-full lg:w-1/2 -ml-8">
         <img
-          src="/images/facilities-1.png"
+          src="src/assets/images/facilities-1.webp"
           alt="Main facility"
           class="object-cover w-[700px] h-[800px]"
         />
@@ -177,7 +177,7 @@ import FootballPitchIcon from "@/assets/svg/football-pitch.svg";
       <!-- Video derecha -->
       <div class="relative w-full lg:w-1/2">
         <video
-          src="/assets/facilities/facilities-video.m4v"
+          src="src/assets/videos/facilities.mp4"
           autoplay
           loop
           muted
@@ -195,21 +195,21 @@ import FootballPitchIcon from "@/assets/svg/football-pitch.svg";
       <div class="flex flex-row overflow-x-auto">
         <div class="h-[480px] flex-shrink-0 overflow-hidden">
           <img
-            src="/images/facilities-2.png"
+            src="src/assets/images/facilities-2.webp"
             alt="Facility 2"
             class="object-cover w-full h-full"
           />
         </div>
         <div class="h-[480px] flex-shrink-0 overflow-hidden -ml-6">
           <img
-            src="/images/facilities-3.png"
+            src="src/assets/images/facilities-3.webp"
             alt="Facility 3"
             class="object-cover w-full h-full"
           />
         </div>
         <div class="h-[480px] w-[414px] flex-shrink-0 overflow-hidden -ml-2">
           <video
-            src="/assets/facilities/facilities-gallery-video.m4v"
+            src="src/assets/videos/facilities-gallery.mp4"
             autoplay
             loop
             muted
@@ -220,14 +220,14 @@ import FootballPitchIcon from "@/assets/svg/football-pitch.svg";
         </div>
         <div class="h-[480px] flex-shrink-0 overflow-hidden -ml-6">
           <img
-            src="/images/facilities-4.png"
+            src="src/assets/images/facilities-4.webp"
             alt="Facility 4"
             class="object-cover w-full h-full"
           />
         </div>
         <div class="h-[480px] flex-shrink-0 overflow-hidden -ml-6">
           <img
-            src="/images/facilities-5.png"
+            src="src/assets/images/about.webp"
             alt="Facility 5"
             class="object-cover w-full h-full"
           />

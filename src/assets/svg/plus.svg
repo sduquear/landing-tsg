@@ -1,9 +1,0 @@
-<svg viewBox="0 0 43 37" fill="none" width="65" height="56">
-  <g>
-    <path class="plus-background" d="M0 36.66L4.12 0H42.57L38.78 36.66H0Z" fill="#D4FF7B"></path>
-    <g class="plus-cross">
-      <path d="M28.83 19.46H22.36V25.93H20.21V19.46H13.74V17.31H20.21V10.84H22.36V17.31H28.83V19.46Z" fill="#46693B"
-        stroke="#46693B" stroke-width="0.65"></path>
-    </g>
-  </g>
-</svg>

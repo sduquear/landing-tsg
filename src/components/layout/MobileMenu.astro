@@ -1,6 +1,6 @@
 ---
 import Btn from "@/components/common/Btn.astro";
-import MobileMenuToggle from "../common/MobileMenuToggle.astro";
+import MobileMenuToggle from "@/components/common/MobileMenuToggle.astro";
 import LogoGreen from "@/assets/logos/logo-green.svg";
 
 interface Props {
@@ -35,7 +35,7 @@ const baseRoute = isExperiencesPage ? "/experiences" : "";
       </a>
       <MobileMenuToggle
         id="close-menu-btn"
-        icon="/icons/close.svg"
+        icon="src/assets/icons/close.svg"
         alt="Close menu"
       />
     </header>
@@ -60,7 +60,7 @@ const baseRoute = isExperiencesPage ? "/experiences" : "";
             href="/experiences"
           >
             <img
-              src="/icons/arrow-inclined-light.svg"
+              src="src/assets/icons/arrow-inclined-light.svg"
               alt="Sports experiences button"
             />
           </Btn>

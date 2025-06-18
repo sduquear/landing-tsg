@@ -1,0 +1,18 @@
+---
+interface Props {
+  videoId: string;
+  className?: string;
+  style?: string;
+}
+
+const { videoId, className = "", style = "" } = Astro.props;
+---
+
+<iframe
+  src={`https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1&mute=1&loop=1&playlist=${videoId}&modestbranding=1&showinfo=0&rel=0&enablejsapi=1&playsinline=1`}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  loading="lazy"
+  class={`${className}`}
+  style={style}
+>
+</iframe>

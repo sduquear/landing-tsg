@@ -1,10 +1,9 @@
 ---
 // Footer.astro
-import LabelIcon from "@/assets/svg/label.svg";
+import LabelIcon from "@/assets/icons/label.svg";
 import Btn from "@/components/common/Btn.astro";
-import ArrowInclinedLightIcon from "../../../public/icons/arrow-inclined-light.svg";
+import ArrowInclinedLightIcon from "@/assets/icons/arrow-inclined-light.svg";
 import LogoGreen from "@/assets/logos/logo-green.svg";
-const FOOTER_IMAGE_URL = "/images/footer-img.png";
 ---
 
 <footer id="contact" class="bg-[#D4FF7B] text-[#46693B] px-6 py-12">
@@ -112,7 +111,7 @@ const FOOTER_IMAGE_URL = "/images/footer-img.png";
     <div class="hidden lg:flex lg:w-1/3 flex-col justify-between items-end">
       <LogoGreen class="w-[160px] h-[50px]" />
       <img
-        src={FOOTER_IMAGE_URL}
+        src="src/assets/images/footer.webp"
         class="h-[432px] object-cover mt-4"
         alt="Young athletes"
       />

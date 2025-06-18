@@ -1,35 +1,14 @@
 ---
 // Facilities.astro
-import SectionHeader from "../common/SectionHeader.astro";
-import Btn from "../common/Btn.astro";
-import FacilityCard from "../common/FacilityCard.astro";
-import ArrowInclinedDarkIcon from "../../../public/icons/arrow-inclined-dark.svg";
-
-const facilities = [
-  {
-    text: "Two FIFA-standard football pitches",
-  },
-  {
-    text: "Pool, classrooms, study & leisure areas",
-  },
-  {
-    text: "Fully equipped gym & recovery zones",
-  },
-  {
-    text: "Cafeteria, garden spaces and more",
-  },
-  {
-    text: "On-site residence with full board",
-  },
-  {
-    text: "Game rooms, media lounges & meeting room",
-  },
-];
+import SectionHeader from "@/components/common/SectionHeader.astro";
+import Btn from "@/components/common/Btn.astro";
+import FacilityCard from "@/components/common/FacilityCard.astro";
+import ArrowInclinedDarkIcon from "@/assets/icons/arrow-inclined-dark.svg";
 ---
 
 <section
   class="relative flex h-screen w-screen flex-col px-6 py-12"
-  style="background: linear-gradient(0deg, rgba(39, 48, 35, 0.20) 0%, rgba(39, 48, 35, 0.20) 100%), linear-gradient(139deg, rgba(39, 48, 35, 0.00) 56.75%, rgba(39, 48, 35, 0.40) 90.15%), url('/images/facilities-bg.jpg') lightgray 50% / cover no-repeat;"
+  style="background: linear-gradient(0deg, rgba(39, 48, 35, 0.20) 0%, rgba(39, 48, 35, 0.20) 100%), linear-gradient(139deg, rgba(39, 48, 35, 0.00) 56.75%, rgba(39, 48, 35, 0.40) 90.15%), url('src/assets/images/facilities-bg.webp') lightgray 50% / cover no-repeat;"
 >
   <div class="flex flex-col">
     <SectionHeader
