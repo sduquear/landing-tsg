@@ -2,19 +2,22 @@
 // Hero.astro
 import Btn from "@/components/common/Btn.astro";
 import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
-import heroVideo from "/videos/hero.mp4";
 ---
 
 <section
   class="relative flex min-h-screen w-full px-5 clip-down-right-hero_mobile lg:clip-down-right-hero_desktop"
 >
   <video
-    src={heroVideo}
     autoplay
     loop
     muted
     playsinline
-    class="absolute top-0 left-0 w-full h-full z-[-1] object-none"></video>
+    class="absolute top-0 left-0 w-full h-full z-[-1] object-none"
+  >
+    <source
+      src="https://res.cloudinary.com/sduquear/video/upload/f_auto:video,q_auto,fps_24,du_30/v1750356603/hero"
+    />
+  </video>
 
   <div class="absolute top-0 left-0 w-full h-full z-[-1] bg-[#273023]/40"></div>
 

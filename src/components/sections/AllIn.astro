@@ -9,9 +9,6 @@ import WhiteBalanceSunnyIcon from "@/assets/icons/white-balance-sunny.svg";
 import PermMediaIcon from "@/assets/icons/perm-media.svg";
 import MdiGymIcon from "@/assets/icons/gym.svg";
 import FootballPitchIcon from "@/assets/icons/football-pitch.svg";
-import allInVideo from "/videos/all-in.mp4";
-import facilitiesVideo from "/videos/facilities.mp4";
-import facilitiesGalleryVideo from "/videos/facilities-gallery.mp4";
 ---
 
 <section class="relative w-full pt-24">
@@ -19,13 +16,11 @@ import facilitiesGalleryVideo from "/videos/facilities-gallery.mp4";
     class="flex flex-col w-full h-full"
     style="clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);"
   >
-    <video
-      src={allInVideo}
-      autoplay
-      loop
-      muted
-      playsinline
-      class="w-full h-full object-none"></video>
+    <video autoplay loop muted playsinline class="w-full h-full object-none">
+      <source
+        src="https://res.cloudinary.com/sduquear/video/upload/f_auto:video,q_auto,fps_24,so_8/v1750356603/all-in"
+      />
+    </video>
   </div>
   <div class="flex flex-col lg:flex-row px-6 py-6 lg:py-12">
     <div class="lg:w-2/3 lg:flex flex-col">
@@ -180,7 +175,6 @@ import facilitiesGalleryVideo from "/videos/facilities-gallery.mp4";
       <!-- Video derecha -->
       <div class="relative w-full lg:w-1/2">
         <video
-          src={facilitiesVideo}
           autoplay
           loop
           muted
@@ -188,6 +182,9 @@ import facilitiesGalleryVideo from "/videos/facilities-gallery.mp4";
           class="w-full"
           style="clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);"
         >
+          <source
+            src="https://res.cloudinary.com/sduquear/video/upload/f_auto:video,q_auto,fps_24,so_4,du_26/v1750356603/facilities"
+          />
         </video>
       </div>
     </div>
@@ -212,14 +209,17 @@ import facilitiesGalleryVideo from "/videos/facilities-gallery.mp4";
         </div>
         <div class="h-[480px] w-[414px] flex-shrink-0 overflow-hidden -ml-2">
           <video
-            src={facilitiesGalleryVideo}
             autoplay
             loop
             muted
             playsinline
             class="object-cover w-full h-full"
             style="clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);"
-          ></video>
+          >
+            <source
+              src="https://res.cloudinary.com/sduquear/video/upload/f_auto:video,q_auto,fps_24,so_2,du_24/v1750356603/facilities-gallery"
+            />
+          </video>
         </div>
         <div class="h-[480px] flex-shrink-0 overflow-hidden -ml-6">
           <img
