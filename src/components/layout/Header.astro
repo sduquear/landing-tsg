@@ -18,7 +18,7 @@ const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
 <header id="main-header" class="absolute top-0 z-50 w-screen p-5">
   <nav class="flex items-center justify-between uppercase">
     <div class="flex">
-      <a href="/">
+      <a href="/" aria-label="Go to homepage - Total Sports Group">
         {
           isExperiencesPage ? (
             <LogoDark class="h-[48px]" />
@@ -34,16 +34,24 @@ const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
         style={`color: ${textColor}`}
       >
         <li>
-          <a href={`${baseRoute}#about`} class="hover:text-[#d4ff7b]">About</a>
-        </li>
-        <li>
-          <a href={`${baseRoute}#services`} class="hover:text-[#d4ff7b]"
-            >Services</a
+          <a
+            href={`${baseRoute}#about`}
+            class="hover:text-[#d4ff7b]"
+            aria-label="Go to About section">About</a
           >
         </li>
         <li>
-          <a href={`${baseRoute}#contact`} class="hover:text-[#d4ff7b]"
-            >Contact</a
+          <a
+            href={`${baseRoute}#services`}
+            class="hover:text-[#d4ff7b]"
+            aria-label="Go to Services section">Services</a
+          >
+        </li>
+        <li>
+          <a
+            href={`${baseRoute}#contact`}
+            class="hover:text-[#d4ff7b]"
+            aria-label="Go to Contact section">Contact</a
           >
         </li>
       </ul>
@@ -51,7 +59,11 @@ const { textColor = isExperiencesPage ? "#000" : "#FFF" } = Astro.props;
     {
       !isExperiencesPage && (
         <div class="hidden lg:flex">
-          <Btn text="Sports experiences" href="/experiences">
+          <Btn
+            text="Sports experiences"
+            href="/experiences"
+            ariaLabel="Go to Sports experiences page"
+          >
             <ArrowInclinedDarkIcon />
           </Btn>
         </div>

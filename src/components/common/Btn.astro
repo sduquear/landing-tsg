@@ -4,8 +4,15 @@ export interface Props {
   href: string;
   color?: string;
   textColor?: string;
+  ariaLabel?: string;
 }
-const { text, href, color = "#D4FF7B", textColor = "#273023" } = Astro.props;
+const {
+  text,
+  href,
+  color = "#D4FF7B",
+  textColor = "#273023",
+  ariaLabel,
+} = Astro.props;
 ---
 
 <div class="relative inline-flex items-center -ml-2">
@@ -29,6 +36,7 @@ const { text, href, color = "#D4FF7B", textColor = "#273023" } = Astro.props;
       background: color,
       color: textColor,
     }}
+    aria-label={ariaLabel}
   >
     <span class="text-center pt-1" style={{ color: textColor }}>{text}</span>
     <span class="ml-1 flex items-center">

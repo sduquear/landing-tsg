@@ -30,7 +30,7 @@ const baseRoute = isExperiencesPage ? "/experiences" : "";
   >
     {/* Header */}
     <header class="flex items-center justify-between h-[88px]">
-      <a href="/">
+      <a href="/" aria-label="Go to homepage - Total Sports Group">
         <LogoGreen class="h-[48px]" />
       </a>
       <MobileMenuToggle id="close-menu-btn" isOpen={true} />
@@ -41,9 +41,21 @@ const baseRoute = isExperiencesPage ? "/experiences" : "";
       class="flex-1 flex flex-col justify-center gap-2 pt-10 font-titling font-medium text-[#46693B] text-4xl w-fit"
       aria-label="Main navigation"
     >
-      <a href={`${baseRoute}#about`} tabindex="0">ABOUT</a>
-      <a href={`${baseRoute}#services`} tabindex="0">SERVICES</a>
-      <a href={`${baseRoute}#contact`} tabindex="0">CONTACT</a>
+      <a
+        href={`${baseRoute}#about`}
+        tabindex="0"
+        aria-label="Go to About section">ABOUT</a
+      >
+      <a
+        href={`${baseRoute}#services`}
+        tabindex="0"
+        aria-label="Go to Services section">SERVICES</a
+      >
+      <a
+        href={`${baseRoute}#contact`}
+        tabindex="0"
+        aria-label="Go to Contact section">CONTACT</a
+      >
     </nav>
 
     <div class="py-8">
@@ -54,6 +66,7 @@ const baseRoute = isExperiencesPage ? "/experiences" : "";
             textColor="#D4FF7B"
             text="Sports experiences"
             href="/experiences"
+            ariaLabel="Go to Sports experiences page"
           >
             <ArrowInclinedLightIcon />
           </Btn>

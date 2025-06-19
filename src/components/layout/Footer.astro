@@ -26,6 +26,7 @@ import LogoGreen from "@/assets/logos/logo-green.svg";
           color="#46693B"
           textColor="#D4FF7B"
           text="Drop us a message"
+          ariaLabel="Send us an email to sales@totalsportsgroup.es"
         >
           <ArrowInclinedLightIcon />
         </Btn>
@@ -35,10 +36,26 @@ import LogoGreen from "@/assets/logos/logo-green.svg";
         class="flex flex-col lg:flex-row justify-between my-8 lg:my-0 lg:mt-16"
       >
         <nav class="flex flex-col uppercase font-titling text-3xl gap-1">
-          <a href="/experiences" class="hover:underline">Sports experiences</a>
-          <a href="/#about" class="hover:underline w-fit">About</a>
-          <a href="#services" class="hover:underline w-fit">Services</a>
-          <a href="#contact" class="hover:underline w-fit">Contact</a>
+          <a
+            href="/experiences"
+            class="hover:underline"
+            aria-label="Go to Sports experiences page">Sports experiences</a
+          >
+          <a
+            href="/#about"
+            class="hover:underline w-fit"
+            aria-label="Go to About section">About</a
+          >
+          <a
+            href="#services"
+            class="hover:underline w-fit"
+            aria-label="Go to Services section">Services</a
+          >
+          <a
+            href="#contact"
+            class="hover:underline w-fit"
+            aria-label="Go to Contact section">Contact</a
+          >
         </nav>
         <div class="lg:flex flex-col hidden lg:basis-1/3">
           <span class="uppercase font-titling">Follow us :</span>
@@ -46,12 +63,14 @@ import LogoGreen from "@/assets/logos/logo-green.svg";
             href="https://www.instagram.com/tsg_totalsportsgroup/"
             target="_blank"
             rel="noopener"
+            aria-label="Follow us on Instagram (opens in new tab)"
             class="font-regesto hover:underline">Instagram</a
           >
           <a
             href="https://www.linkedin.com/company/total-sports-group/about/"
             target="_blank"
             rel="noopener"
+            aria-label="Follow us on LinkedIn (opens in new tab)"
             class="font-regesto hover:underline">LinkedIn</a
           >
         </div>
@@ -64,13 +83,11 @@ import LogoGreen from "@/assets/logos/logo-green.svg";
             <span class="font-titling uppercase pt-[1px]"
               >©Total sports group</span
             >
-            <span class="font-regesto"
-              >Madrid, Spain</span
-            >
+            <span class="font-regesto">Madrid, Spain</span>
           </div>
           <div class="flex flex-row basis-1/3 gap-4 font-regesto">
-            <a class="hover:underline">Privacy Statement</a>
-            <a class="hover:underline">Terms & Conditions</a>
+            <span>Privacy Statement</span>
+            <span>Terms & Conditions</span>
           </div>
         </div>
       </div>
@@ -83,12 +100,14 @@ import LogoGreen from "@/assets/logos/logo-green.svg";
               href="https://www.instagram.com/tsg_totalsportsgroup/"
               target="_blank"
               rel="noopener"
+              aria-label="Follow us on Instagram (opens in new tab)"
               class="font-regesto hover:underline">Instagram</a
             >
             <a
               href="https://www.linkedin.com/company/total-sports-group/about/"
               target="_blank"
               rel="noopener"
+              aria-label="Follow us on LinkedIn (opens in new tab)"
               class="font-regesto hover:underline">LinkedIn</a
             >
           </div>
@@ -101,8 +120,8 @@ import LogoGreen from "@/assets/logos/logo-green.svg";
         <hr class="h-px bg-[#46693B]/40 border-0 my-4" />
 
         <div class="flex justify-between font-regesto text-base">
-          <a class="hover:underline">Privacy Statement</a>
-          <a class="hover:underline">Terms & Conditions</a>
+          <span>Privacy Statement</span>
+          <span>Terms & Conditions</span>
         </div>
       </div>
     </div>
