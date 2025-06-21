@@ -5,14 +5,14 @@ import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
 ---
 
 <section
-  class="relative flex min-h-screen w-full px-5 clip-down-right-hero_mobile lg:clip-down-right-hero_desktop"
+  class="relative flex h-screen w-full px-5 clip-down-right-hero_mobile lg:clip-down-right-hero_desktop"
 >
   <video
     autoplay
     loop
     muted
     playsinline
-    class="absolute top-0 left-0 w-full h-full z-[-1] object-none"
+    class="absolute top-0 left-0 w-full h-screen z-[-1] object-cover"
   >
     <source
       src="https://res.cloudinary.com/sduquear/video/upload/f_auto:video,q_auto,fps_24,du_30/v1750356603/hero"
@@ -21,27 +21,26 @@ import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
 
   <div class="absolute top-0 left-0 w-full h-full z-[-1] bg-[#273023]/40"></div>
 
-  <div class="relative flex w-full flex-col lg:pt-28">
-    <!-- <slot name="header" /> -->
-    <div class="flex flex-1 flex-col justify-end lg:flex-0 py-10">
-      <h1 class="text-6xl lg:text-9xl/30 uppercase text-white font-titling">
+  <div
+    class="relative flex flex-col justify-end text-white gap-4 mb-8 lg:flex-row lg:gap-0 lg:mb-0"
+  >
+    <div class="flex flex-col lg:justify-center lg:mb-24">
+      <h1 class="text-4xl lg:text-8xl/24 uppercase font-titling">
         We connect sport, talent, and unique experiences on a global scale.
       </h1>
-      <div class="flex flex-col lg:pt-8 lg:w-[24%] lg:ml-auto">
-        <p
-          class="text-white text-regesto font-bold text-[clamp(1rem,2.5vw,1.125rem)] py-4 tracking-tight"
-        >
-          From tailored football tours to long-term athlete development, TSG
-          designs unforgettable journeys that go beyond the pitch.
-        </p>
-        <Btn
-          text="Discover more"
-          href="#about"
-          ariaLabel="Scroll to About section"
-        >
-          <ArrowDownIcon fill="#D4FF7B" />
-        </Btn>
-      </div>
+    </div>
+    <div class="flex flex-col gap-4 justify-end lg:m-8 mr-1">
+      <p class="font-regesto">
+        From tailored football tours to long-term athlete development, TSG
+        designs unforgettable journeys that go beyond the pitch.
+      </p>
+      <Btn
+        text="Discover more"
+        href="#about"
+        ariaLabel="Scroll to About section"
+      >
+        <ArrowDownIcon fill="#D4FF7B" />
+      </Btn>
     </div>
   </div>
 </section>

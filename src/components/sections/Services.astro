@@ -21,11 +21,11 @@ import PlusIcon from "@/assets/icons/plus.svg";
     title="Explore our services"
     titleColor="#FFF"
     class="px-10"
-    titleClass="w-[50%]"
+    titleClass="text-4xl lg:w-[48%]"
   />
 
   <div
-    class="flex overflow-x-auto scrollbar-hide lg:gap-2 gap-4 px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    class="flex overflow-x-auto scrollbar-hide lg:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:-mx-8"
   >
     <!-- Card 1 -->
     <a
@@ -34,130 +34,131 @@ import PlusIcon from "@/assets/icons/plus.svg";
       aria-label="Learn more about Sports experiences"
     >
       <div
-        class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
-        style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+        class="relative shrink-0 w-[346px] h-[400px] lg:w-[516px] lg:h-[588px] bg-white/5 hover:bg-[#1E231C] transition-all duration-300 group"
+        style="clip-path: polygon(8% 0, 98% 0, 90% 100%, 0% 100%);"
       >
         <div
-          class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+          class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-5xl leading-none font-titling uppercase w-[50%]"
         >
           Sports experiences
         </div>
-        <div
-          class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
-        >
-          <div
-            class="w-full h-full bg-cover bg-no-repeat bg-center transition-all duration-300 group-hover:scale-104"
-            style="background-image: url('/images/sports_experiences.webp');"
-          >
-          </div>
+        <!-- mx-8 pt-6 -->
+        <div class="overflow-hidden z-0 flex flex-col items-center">
+          <img
+            src="/images/sports_experiences.webp"
+            alt="Facility 2"
+            class="w-full h-full px-6 mt-6 lg:mt-4 group-hover:scale-116 transition-all duration-300 object-cover"
+          />
         </div>
-        <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+        <PlusIcon
+          class="absolute right-12 lg:right-18 bottom-3 z-20 lg:w-16 lg:h-16 w-12 h-12"
+        />
       </div>
     </a>
     <!-- Card 2 -->
     <div
-      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
-      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+      class="relative shrink-0 w-[346px] h-[400px] lg:w-[516px] lg:h-[588px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group lg:-ml-10"
+      style="clip-path: polygon(8% 0, 98% 0, 90% 100%, 0% 100%);"
     >
       <div
-        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-5xl leading-none font-titling uppercase w-[50%]"
       >
         Sports tourism
       </div>
-      <div
-        class="w-[404px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
-      >
-        <div
-          class="w-full h-full bg-cover bg-no-repeat bg-center transition-all duration-300 group-hover:scale-104"
-          style="background-image: url('/images/sports_tourism.webp');"
-        >
-        </div>
+      <div class="overflow-hidden z-0 flex flex-col items-center">
+        <img
+          src="/images/sports_tourism.webp"
+          alt="Sports tourism"
+          class="w-full h-full px-6 mt-4 group-hover:scale-116 transition-all duration-300 object-cover"
+        />
       </div>
-      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+      <PlusIcon
+        class="absolute right-12 lg:right-18 bottom-3 z-20 lg:w-16 lg:h-16 w-12 h-12"
+      />
     </div>
     <!-- Card 3 -->
     <div
-      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
-      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+      class="relative shrink-0 w-[346px] h-[400px] lg:w-[516px] lg:h-[588px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group lg:-ml-10"
+      style="clip-path: polygon(8% 0, 98% 0, 90% 100%, 0% 100%);"
     >
       <div
-        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-5xl leading-none font-titling uppercase w-[50%]"
       >
         Talent development
       </div>
-      <div
-        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
-      >
-        <div
-          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
-          style="background-image: url('/images/talent_development.webp');"
-        >
-        </div>
+      <div class="overflow-hidden z-0 flex flex-col items-center">
+        <img
+          src="/images/talent_development.webp"
+          alt="Talent development"
+          class="w-full h-full px-6 mt-4 group-hover:scale-116 transition-all duration-300 object-cover"
+        />
       </div>
-      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+      <PlusIcon
+        class="absolute right-12 lg:right-18 bottom-3 z-20 lg:w-16 lg:h-16 w-12 h-12"
+      />
     </div>
     <!-- Card 4 -->
     <div
-      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
-      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+      class="relative shrink-0 w-[346px] h-[400px] lg:w-[516px] lg:h-[588px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group lg:-ml-10"
+      style="clip-path: polygon(8% 0, 98% 0, 90% 100%, 0% 100%);"
     >
       <div
-        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-5xl leading-none font-titling uppercase w-[50%]"
       >
         Travel Management
       </div>
-      <div
-        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
-      >
-        <div
-          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
-          style="background-image: url('/images/travel_management.webp');"
-        >
-        </div>
+      <div class="overflow-hidden z-0 flex flex-col items-center">
+        <img
+          src="/images/travel_management.webp"
+          alt="Travel management"
+          class="w-full h-full px-6 mt-4 group-hover:scale-116 transition-all duration-300 object-cover"
+        />
       </div>
-      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+      <PlusIcon
+        class="absolute right-12 lg:right-18 bottom-3 z-20 lg:w-16 lg:h-16 w-12 h-12"
+      />
     </div>
     <!-- Card 5 -->
     <div
-      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
-      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+      class="relative shrink-0 w-[346px] h-[400px] lg:w-[516px] lg:h-[588px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group lg:-ml-10"
+      style="clip-path: polygon(8% 0, 98% 0, 90% 100%, 0% 100%);"
     >
       <div
-        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-5xl leading-none font-titling uppercase w-[50%]"
       >
         Event creation & management
       </div>
-      <div
-        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
-      >
-        <div
-          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
-          style="background-image: url('/images/event_creation_management.webp');"
-        >
-        </div>
+      <div class="overflow-hidden z-0 flex flex-col items-center">
+        <img
+          src="/images/event_creation_management.webp"
+          alt="Event creation & management"
+          class="w-full h-full px-6 mt-4 group-hover:scale-116 transition-all duration-300 object-cover"
+        />
       </div>
-      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+      <PlusIcon
+        class="absolute right-12 lg:right-18 bottom-3 z-20 lg:w-16 lg:h-16 w-12 h-12"
+      />
     </div>
     <!-- Card 6 -->
     <div
-      class="relative shrink-0 w-[400px] h-[424px] lg:w-[500px] lg:h-[540px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group"
-      style="clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);"
+      class="relative shrink-0 w-[346px] h-[400px] lg:w-[516px] lg:h-[588px] bg-white/5 -ml-6 hover:bg-[#1E231C] transition-all duration-300 group lg:-ml-10"
+      style="clip-path: polygon(8% 0, 98% 0, 90% 100%, 0% 100%);"
     >
       <div
-        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-4xl leading-none font-titling uppercase w-[50%]"
+        class="absolute left-7 bottom-3 z-10 text-[#f3f5f2] text-3xl lg:text-5xl leading-none font-titling uppercase w-[50%]"
       >
         Sports consulting
       </div>
-      <div
-        class="w-[400px] h-[350px] lg:w-[504px] lg:h-[450px] overflow-hidden z-0 p-6"
-      >
-        <div
-          class="w-full h-full bg-center-center bg-cover bg-no-repeat transition-all duration-300 group-hover:scale-104"
-          style="background-image: url('/images/sports_consulting.webp');"
-        >
-        </div>
+      <div class="overflow-hidden z-0 flex flex-col items-center">
+        <img
+          src="/images/sports_consulting.webp"
+          alt="Sports consulting"
+          class="w-full h-full px-6 mt-4 group-hover:scale-116 transition-all duration-300 object-cover"
+        />
       </div>
-      <PlusIcon class="absolute right-12 lg:right-14 bottom-4 z-20" />
+      <PlusIcon
+        class="absolute right-12 lg:right-18 bottom-3 z-20 lg:w-16 lg:h-16 w-12 h-12"
+      />
     </div>
   </div>
 </section>
