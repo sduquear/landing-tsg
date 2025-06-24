@@ -9,7 +9,6 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
-  noindex?: boolean;
   structuredData?: object;
 }
 
@@ -18,7 +17,6 @@ const {
   description = "Experience unique, fully managed football journeys in Spain. TSG designs tailored programs for academies, schools, and elite teams, combining competition, training, culture, and personal development at world-class facilities.",
   canonical = Astro.url.href,
   ogImage = "https://totalsportsgroup.es/images/facilities-bg.webp",
-  noindex = false,
   structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -58,14 +56,8 @@ const currentYear = new Date().getFullYear();
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Total Sports Group" />
-    <meta
-      name="robots"
-      content={noindex ? "noindex, nofollow" : "index, follow"}
-    />
-    <meta
-      name="googlebot"
-      content={noindex ? "noindex, nofollow" : "index, follow"}
-    />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
