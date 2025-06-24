@@ -6,9 +6,100 @@ import WhatWeOffer from "@/components/sections/WhatWeOffer.astro";
 import Partners from "@/components/sections/Partners.astro";
 import AllIn from "@/components/sections/AllIn.astro";
 import Facilities from "@/components/sections/Facilities.astro";
+
+// SEO específico para la página de experiencias
+const seoData = {
+  title: "Total Sports Group | Sports Experiences & Programs",
+  description:
+    "Discover our comprehensive sports experiences and programs. From football training camps to international tournaments, TSG offers tailored solutions for teams, academies, and athletes seeking professional development in Spain.",
+  canonical: "https://totalsportsgroup.es/experiences",
+  ogImage: "https://totalsportsgroup.es/images/sports_experiences.webp",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Total Sports Group - Sports Experiences & Programs",
+    description:
+      "Comprehensive sports experiences and programs for teams, academies, and athletes in Spain.",
+    url: "https://totalsportsgroup.es/experiences",
+    mainEntity: {
+      "@type": "Service",
+      name: "Sports Experiences & Programs",
+      description:
+        "Professional sports experiences, training programs, and international tournaments in Spain",
+      provider: {
+        "@type": "Organization",
+        name: "Total Sports Group",
+        url: "https://totalsportsgroup.es",
+      },
+      serviceType: "Sports Training and Events",
+      areaServed: {
+        "@type": "Country",
+        name: "Spain",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Sports Experiences Catalog",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Football Training Camps",
+              description:
+                "Professional football training programs for teams and academies",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "International Tournaments",
+              description:
+                "Competitive football tournaments with international teams",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Talent Development Programs",
+              description:
+                "Long-term athlete development and scouting programs",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Sports Tourism Packages",
+              description:
+                "Complete travel and training packages for sports teams",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Event Management Services",
+              description: "Professional sports event creation and management",
+            },
+          },
+        ],
+      },
+      location: {
+        "@type": "Place",
+        name: "Spain",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "ES",
+        },
+      },
+    },
+  },
+};
 ---
 
-<Layout>
+<Layout {...seoData}>
   <SportsExperiences />
   <AboutExperiences />
   <WhatWeOffer />

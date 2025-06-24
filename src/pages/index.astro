@@ -3,9 +3,93 @@ import Layout from "@/layouts/Layout.astro";
 
 import Hero from "@/components/sections/Hero.astro";
 import About from "@/components/sections/About.astro";
+
+// SEO específico para la página principal
+const seoData = {
+  title: "Total Sports Group | Unique Football Experiences in Spain",
+  description:
+    "Experience unique, fully managed football journeys in Spain. TSG designs tailored programs for academies, schools, and elite teams, combining competition, training, culture, and personal development at world-class facilities.",
+  canonical: "https://totalsportsgroup.es/",
+  ogImage: "https://totalsportsgroup.es/images/facilities-bg.webp",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Total Sports Group - Unique Football Experiences in Spain",
+    description:
+      "Experience unique, fully managed football journeys in Spain. TSG designs tailored programs for academies, schools, and elite teams.",
+    url: "https://totalsportsgroup.es/",
+    mainEntity: {
+      "@type": "Organization",
+      name: "Total Sports Group",
+      url: "https://totalsportsgroup.es",
+      logo: "https://totalsportsgroup.es/assets/logos/logo-dark.svg",
+      description:
+        "Professional sports organization specializing in football experiences and training programs in Spain.",
+      sport: "Football",
+      location: {
+        "@type": "Place",
+        name: "Spain",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "ES",
+        },
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Sports Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Sports Experiences",
+              description:
+                "Tailored football experiences and programs for teams and academies",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Talent Development",
+              description:
+                "Professional athlete development and training programs",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Sports Tourism",
+              description:
+                "International sports travel and cultural experiences",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Event Management",
+              description: "Professional sports event creation and management",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Sports Consulting",
+              description:
+                "Strategic consulting for sports organizations and clubs",
+            },
+          },
+        ],
+      },
+    },
+  },
+};
 ---
 
-<Layout>
+<Layout {...seoData}>
   <Hero />
   <About />
 </Layout>

@@ -6,16 +6,83 @@ import "@/styles/global.css";
 
 interface Props {
   title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  structuredData?: object;
 }
 
-const { title = "Total Sports Group" } = Astro.props;
+const {
+  title = "Total Sports Group | Unique Football Experiences in Spain",
+  description = "Experience unique, fully managed football journeys in Spain. TSG designs tailored programs for academies, schools, and elite teams, combining competition, training, culture, and personal development at world-class facilities.",
+  canonical = Astro.url.href,
+  ogImage = "https://totalsportsgroup.es/images/facilities-bg.webp",
+  noindex = false,
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Total Sports Group",
+    url: "https://totalsportsgroup.es",
+    logo: "https://totalsportsgroup.es/assets/logos/logo-dark.svg",
+    description:
+      "Total Sports Group creates unique football experiences in Spain, offering tailored programs, elite training, and unforgettable moments for teams, academies, and athletes from around the world.",
+    foundingDate: "2025",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "ES",
+      addressLocality: "Madrid",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      availableLanguage: ["English", "Spanish"],
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/total-sports-group",
+      "https://www.instagram.com/totalsportsgroup",
+    ],
+  },
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Total Sports Group" />
+    <meta
+      name="robots"
+      content={noindex ? "noindex, nofollow" : "index, follow"}
+    />
+    <meta
+      name="googlebot"
+      content={noindex ? "noindex, nofollow" : "index, follow"}
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="football experiences, sports tourism Spain, football academies, sports events, talent development, sports consulting, football training, international tournaments, sports travel, TSG, Total Sports Group, Real Madrid, Atlético Madrid, Rayo Vallecano, Leganés, Adidas, sports facilities, sports management, soccer, La Liga"
+    />
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#273023" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preload Critical Resources -->
     <link
       rel="preload"
       href="/fonts/RegestoGrotesk-Bold.woff2"
@@ -30,36 +97,107 @@ const { title = "Total Sports Group" } = Astro.props;
       type="font/woff2"
       crossorigin
     />
-    <title>{title}</title>
-    <meta
-      name="description"
-      content="Experience unique, fully managed football journeys in Spain. TSG designs tailored programs for academies, schools, and elite teams, combining competition, training, culture, and personal development at world-class facilities."
-    />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta
-      property="og:title"
-      content="Total Sports Group | Unique Football Experiences in Spain"
-    />
-    <meta
-      property="og:description"
-      content="Discover how TSG connects sport, talent, and unforgettable experiences on a global scale. Personalized programs, international tournaments, top-tier partners, and all-inclusive services for teams and athletes."
-    />
-    <meta property="og:image" content="/images/facilities-bg.webp" />
-    <meta property="og:url" content="https://www.totalsportsgroup.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Total Sports Group" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Total Sports Group - Football Experiences in Spain"
+    />
+
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Total Sports Group" />
-    <meta
-      name="twitter:description"
-      content="Total Sports Group creates unique football experiences in Spain, offering tailored programs, elite training, and unforgettable moments for teams, academies, and athletes from around the world."
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:url" content={canonical} />
+    <meta name="twitter:site" content="@totalsportsgroup" />
+    <meta name="twitter:creator" content="@totalsportsgroup" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="application-name" content="Total Sports Group" />
+    <meta name="msapplication-TileColor" content="#273023" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- Structured Data (Schema.org) -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
     />
-    <meta name="twitter:image" content="/images/facilities-bg.webp" />
-    <meta name="twitter:url" content="https://www.totalsportsgroup.com/" />
-    <meta
-      name="keywords"
-      content="football, sports experiences, Spain, academies, tournaments, talent development, sports travel, TSG, Total Sports Group, partners, sports facilities, sports events, sports consulting"
+
+    <!-- Additional Structured Data for Sports Organization -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SportsOrganization",
+        name: "Total Sports Group",
+        url: "https://totalsportsgroup.es",
+        description:
+          "Professional sports organization specializing in football experiences, training programs, and international sports events in Spain.",
+        sport: "Football",
+        location: {
+          "@type": "Place",
+          name: "Spain",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "ES",
+          },
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Sports Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Sports Experiences",
+                description: "Tailored football experiences and programs",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Talent Development",
+                description: "Professional athlete development programs",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Sports Tourism",
+                description: "International sports travel and experiences",
+              },
+            },
+          ],
+        },
+      })}
     />
+
+    <!-- Performance Optimizations -->
+    <link rel="dns-prefetch" href="//res.cloudinary.com" />
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+    <!-- Mobile Optimizations -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   </head>
 
   <body>
@@ -67,5 +205,18 @@ const { title = "Total Sports Group" } = Astro.props;
     <slot />
     <Services />
     <Footer />
+
+    <!-- Footer Structured Data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Total Sports Group",
+        url: "https://totalsportsgroup.es",
+        copyrightYear: currentYear,
+        copyrightHolder: "Total Sports Group",
+      })}
+    />
   </body>
 </html>

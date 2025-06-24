@@ -1,0 +1,29 @@
+{
+  "name": "Total Sports Group",
+  "short_name": "TSG",
+  "description": "Unique football experiences in Spain. Professional sports organization specializing in football training, events, and talent development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#273023",
+  "theme_color": "#273023",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["sports", "education", "travel"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/facilities-bg.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Total Sports Group - Football Experiences"
+    }
+  ]
+}

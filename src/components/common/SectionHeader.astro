@@ -7,6 +7,7 @@ const {
   titleColor = "#273023",
   class: extraClass = "",
   titleClass: titleExtraClass = "",
+  titleId,
 } = Astro.props;
 ---
 
@@ -14,7 +15,7 @@ const {
   {
     label && (
       <div class="flex items-center">
-        <LabelIcon fill={labelColor} />
+        <LabelIcon fill={labelColor} aria-hidden="true" />
         <span
           class={`text-s font-titling uppercase pt-1 pl-1`}
           style={`color: ${labelColor}`}
@@ -27,6 +28,7 @@ const {
   {
     title && (
       <h2
+        id={titleId}
         class={`my-6 font-titling text-3xl md:text-5xl lg:text-7xl leading-none uppercase tracking-tight ${titleExtraClass}`}
         style={`color: ${titleColor}`}
       >

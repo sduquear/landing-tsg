@@ -9,19 +9,23 @@ import Partners from "@/components/sections/Partners.astro";
 <section
   id="about"
   class="w-full bg-white py-24 md:py-24 flex flex-col gap-16 md:gap-16"
+  role="region"
+  aria-labelledby="about-title"
 >
   <!-- Encabezado y descripción -->
   <div class="flex flex-col gap-8 px-5">
     <!-- Label con icono -->
     <div class="flex items-center">
-      <LabelIcon fill="#273023" />
+      <LabelIcon fill="#273023" aria-hidden="true" />
       <span class="text-s pl-1 pt-1 font-titling uppercase text-[#273023]"
         >About us</span
       >
     </div>
     <!-- Título -->
     <h2
+      id="about-title"
       class="font-regesto text-3xl md:text-[56px] text-[#273023] leading-none tracking-tight"
+      itemprop="headline"
     >
       We specialize in creating, managing, and scaling sports experiences and
       events that combine travel, training, competition, and professional
@@ -36,16 +40,21 @@ import Partners from "@/components/sections/Partners.astro";
     <div class="md:w-1/2 flex">
       <img
         src="/images/about.webp"
-        alt="Full Service Programs"
+        alt="Total Sports Group full-service programs and sports experiences"
         class="lg:w-[585px] lg:h-[752px] object-contain"
         loading="lazy"
+        width="585"
+        height="752"
       />
     </div>
     <div class="md:w-1/2 flex flex-col justify-center gap-6">
-      <h2 class="text-[#273023] font-titling text-4xl lg:text-7xl leading-none">
+      <h3 class="text-[#273023] font-titling text-4xl lg:text-7xl leading-none">
         FULL-SERVICE PROGRAMS
-      </h2>
-      <p class="text-[#273023] font-regesto text-xl lg:text-2xl text-pretty">
+      </h3>
+      <p
+        class="text-[#273023] font-regesto text-xl lg:text-2xl text-pretty"
+        itemprop="description"
+      >
         Our tailored programs are built to deliver more than just logistics —
         they drive global growth for sports brands while creating meaningful,
         lasting impact for the people who live them: clubs, athletes, families,
@@ -54,11 +63,66 @@ import Partners from "@/components/sections/Partners.astro";
       <Btn
         text="Discover our services"
         href="#services"
-        ariaLabel="Scroll to Services section"
+        ariaLabel="Scroll to Services section to explore our comprehensive sports services"
       >
-        <ArrowDownIcon fill="#D4FF7B" />
+        <ArrowDownIcon fill="#D4FF7B" aria-hidden="true" />
       </Btn>
     </div>
   </div>
   <!-- Fin nueva sección tipo Figma -->
 </section>
+
+<!-- Structured Data for About Section -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Total Sports Group",
+    description:
+      "We specialize in creating, managing, and scaling sports experiences and events that combine travel, training, competition, and professional development.",
+    url: "https://totalsportsgroup.es",
+    foundingDate: "2025",
+    sport: "Football",
+    location: {
+      "@type": "Place",
+      name: "Spain",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "ES",
+      },
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Full-Service Sports Programs",
+      description:
+        "Comprehensive sports programs that combine travel, training, competition, and professional development",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Sports Experiences",
+            description: "Tailored sports experiences and programs",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Event Management",
+            description: "Professional sports event creation and management",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Talent Development",
+            description: "Professional athlete development programs",
+          },
+        },
+      ],
+    },
+  })}
+/>

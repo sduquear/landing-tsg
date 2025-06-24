@@ -6,6 +6,8 @@ import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
 
 <section
   class="relative flex h-screen w-full px-5 clip-down-right-hero_mobile lg:clip-down-right-hero_desktop"
+  role="banner"
+  aria-labelledby="hero-title"
 >
   <video
     autoplay
@@ -13,34 +15,68 @@ import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
     muted
     playsinline
     class="absolute top-0 left-0 w-full h-screen z-[-1] object-cover"
+    aria-hidden="true"
+    poster="/images/facilities-bg.webp"
   >
     <source
       src="https://res.cloudinary.com/sduquear/video/upload/f_auto:video,q_auto,fps_24,du_30/v1750356603/hero"
+      type="video/mp4"
     />
+    <track kind="captions" src="" label="English" />
   </video>
 
-  <div class="absolute top-0 left-0 w-full h-full z-[-1] bg-[#273023]/40"></div>
+  <div
+    class="absolute top-0 left-0 w-full h-full z-[-1] bg-[#273023]/40"
+    aria-hidden="true"
+  >
+  </div>
 
   <div
     class="relative flex flex-col justify-end text-white gap-4 mb-8 lg:flex-row lg:gap-0 lg:mb-0"
+    role="main"
   >
     <div class="flex flex-col lg:justify-center lg:mb-24">
-      <h1 class="text-4xl lg:text-8xl/24 uppercase font-titling">
+      <h1
+        id="hero-title"
+        class="text-4xl lg:text-8xl/24 uppercase font-titling"
+        itemprop="headline"
+      >
         We connect sport, talent, and unique experiences on a global scale.
       </h1>
     </div>
     <div class="flex flex-col gap-4 justify-end lg:m-8 mr-1">
-      <p class="font-regesto">
+      <p class="font-regesto" itemprop="description">
         From tailored football tours to long-term athlete development, TSG
         designs unforgettable journeys that go beyond the pitch.
       </p>
       <Btn
         text="Discover more"
         href="#about"
-        ariaLabel="Scroll to About section"
+        ariaLabel="Scroll to About section to learn more about Total Sports Group"
       >
-        <ArrowDownIcon fill="#D4FF7B" />
+        <ArrowDownIcon fill="#D4FF7B" aria-hidden="true" />
       </Btn>
     </div>
   </div>
 </section>
+
+<!-- Structured Data for Hero Section -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    mainEntity: {
+      "@type": "Organization",
+      name: "Total Sports Group",
+      description:
+        "We connect sport, talent, and unique experiences on a global scale. From tailored football tours to long-term athlete development, TSG designs unforgettable journeys that go beyond the pitch.",
+      url: "https://totalsportsgroup.es",
+      sport: "Football",
+      location: {
+        "@type": "Place",
+        name: "Spain",
+      },
+    },
+  })}
+/>

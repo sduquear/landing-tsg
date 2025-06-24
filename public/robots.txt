@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://totalsportsgroup.es/sitemap.xml
+
+# Crawl-delay para ser respetuoso con el servidor
+Crawl-delay: 1
+
+# Bloquear archivos innecesarios
+Disallow: /fonts/
+Disallow: /assets/icons/
+Disallow: /assets/logos/
+
+# Permitir imágenes importantes
+Allow: /images/
+Allow: /partners/ 

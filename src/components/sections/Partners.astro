@@ -3,70 +3,101 @@
 ---
 
 <!-- Carrusel de partners -->
-<div class="flex flex-col">
-  <span class="text-lg font-regesto text-[#273023] mb-6 px-5">
+<div class="flex flex-col" role="region" aria-labelledby="partners-title">
+  <span
+    id="partners-title"
+    class="text-lg font-regesto text-[#273023] mb-6 px-5"
+  >
     Our partners:
   </span>
-  <div class="flex overflow-x-scroll">
+  <div
+    class="flex overflow-x-scroll"
+    role="list"
+    aria-label="Our sports partners and collaborators"
+  >
     <div class="flex">
       <!-- Partner: Rayo Vallecano -->
       <div
         class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -ml-6 -mr-8 md:-ml-12 md:-mr-14"
+        role="listitem"
       >
         <img
           src="/partners/partner-rayo-vallecano.svg"
-          alt="Rayo Vallecano"
+          alt="Rayo Vallecano - Official partner of Total Sports Group"
           class="h-14 md:h-20 object-contain"
+          loading="lazy"
+          width="84"
+          height="60"
         />
       </div>
       <!-- Partner: Atlético Madrid -->
       <div
         class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+        role="listitem"
       >
         <img
           src="/partners/partner-atletico-madrid.svg"
-          alt="Atlético Madrid"
+          alt="Atlético Madrid - Official partner of Total Sports Group"
           class="h-14 md:h-20 object-contain"
+          loading="lazy"
+          width="84"
+          height="60"
         />
       </div>
       <!-- Partner: Leganés -->
       <div
         class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+        role="listitem"
       >
         <img
           src="/partners/partner-leganes.svg"
-          alt="Leganés"
+          alt="Leganés - Official partner of Total Sports Group"
           class="h-14 md:h-20 object-contain"
+          loading="lazy"
+          width="84"
+          height="60"
         />
       </div>
       <!-- Partner: Adidas -->
       <div
         class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+        role="listitem"
       >
         <img
           src="/partners/partner-adidas.svg"
-          alt="Adidas"
+          alt="Adidas - Official partner of Total Sports Group"
           class="h-14 md:h-20 object-contain"
+          loading="lazy"
+          width="84"
+          height="60"
         />
       </div>
       <!-- Partner: Tenple -->
       <div
         class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-14"
+        role="listitem"
       >
         <img
           src="/partners/partner-tenple.svg"
-          alt="Tenple"
+          alt="Tenple - Official partner of Total Sports Group"
           class="md:h-6 object-contain p-12 md:p-0"
+          loading="lazy"
+          width="84"
+          height="60"
         />
       </div>
       <!-- Partner: Real Madrid -->
       <div
         class="partner-card flex items-center justify-center w-56 h-40 md:w-84 md:h-60 bg-[#F3F5F2] -mr-8 md:-mr-12"
+        role="listitem"
       >
         <img
           src="/partners/partner-real-madrid.svg"
-          alt="Real Madrid"
+          alt="Real Madrid - Official partner of Total Sports Group"
           class="h-14 md:h-24 object-contain"
+          loading="lazy"
+          width="84"
+          height="60"
         />
       </div>
     </div>
@@ -78,3 +109,77 @@
     clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
   }
 </style>
+
+<!-- Structured Data for Partners Section -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Total Sports Group",
+    url: "https://totalsportsgroup.es",
+    hasPart: [
+      {
+        "@type": "Organization",
+        name: "Rayo Vallecano",
+        url: "https://www.rayovallecano.es",
+        sport: "Football",
+      },
+      {
+        "@type": "Organization",
+        name: "Atlético Madrid",
+        url: "https://www.atleticomadrid.com",
+        sport: "Football",
+      },
+      {
+        "@type": "Organization",
+        name: "Leganés",
+        url: "https://www.cdleganes.com",
+        sport: "Football",
+      },
+      {
+        "@type": "Organization",
+        name: "Adidas",
+        url: "https://www.adidas.com",
+        sport: "Sports Equipment",
+      },
+      {
+        "@type": "Organization",
+        name: "Tenple",
+        sport: "Sports Technology",
+      },
+      {
+        "@type": "Organization",
+        name: "Real Madrid",
+        url: "https://www.realmadrid.com",
+        sport: "Football",
+      },
+    ],
+    partner: [
+      {
+        "@type": "Organization",
+        name: "Rayo Vallecano",
+      },
+      {
+        "@type": "Organization",
+        name: "Atlético Madrid",
+      },
+      {
+        "@type": "Organization",
+        name: "Leganés",
+      },
+      {
+        "@type": "Organization",
+        name: "Adidas",
+      },
+      {
+        "@type": "Organization",
+        name: "Tenple",
+      },
+      {
+        "@type": "Organization",
+        name: "Real Madrid",
+      },
+    ],
+  })}
+/>
