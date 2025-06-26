@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="823.93" height="561.99"><svg id="SvgjsSvg1408" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 823.93 561.99">
-  <g id="SvgjsG1407" data-name="Capa 1">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-6c199166-584d-407e-8064-000ea77c09dd" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 823.93 561.99">
+  <g id="uuid-1c478270-9f0c-4da8-8e00-6d6f022caf5f" data-name="Capa 1">
     <g>
-      <polygon points="784.49 154.97 575.85 154.97 636.36 185.49 589.41 368.62 411.43 368.62 465.84 154.97 248.21 154.97 287.66 0 823.93 0 784.49 154.97" style="fill: #c8ff00; stroke-width: 0px;"></polygon>
-      <polygon points="39.44 407 248.08 407 187.6 376.5 234.52 193.37 412.51 193.37 358.1 407 575.3 407 535.86 561.99 0 561.99 39.44 407" style="fill: #c8ff00; stroke-width: 0px;"></polygon>
+      <polygon points="784.49 154.97 575.85 154.97 636.36 185.49 589.41 368.62 411.43 368.62 465.84 154.97 248.21 154.97 287.66 0 823.93 0 784.49 154.97" style="fill: #c8ff00; stroke-width: 0px;"/>
+      <polygon points="39.44 407 248.08 407 187.6 376.5 234.52 193.37 412.51 193.37 358.1 407 575.3 407 535.86 561.99 0 561.99 39.44 407" style="fill: #c8ff00; stroke-width: 0px;"/>
     </g>
   </g>
-</svg><style>@media (prefers-color-scheme: light) { :root { filter: contrast(1) brightness(0.1); } }
-@media (prefers-color-scheme: dark) { :root { filter: none; } }
-</style></svg>
+</svg>
