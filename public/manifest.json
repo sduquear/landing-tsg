@@ -4,8 +4,8 @@
   "description": "Unique football experiences in Spain. Professional sports organization specializing in football training, events, and talent development.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#273023",
-  "theme_color": "#273023",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "orientation": "portrait-primary",
   "scope": "/",
   "categories": ["sports", "education", "travel"],
@@ -15,6 +15,18 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
